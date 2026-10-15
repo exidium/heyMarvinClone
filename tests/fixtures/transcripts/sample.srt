@@ -1,0 +1,15 @@
+1
+00:00:01,000 --> 00:00:04,500
+Dana Carr: Can you walk me through a typical project?
+
+2
+00:00:05,000 --> 00:00:08,200
+{\an8}Pat Example: I usually start from a part I already know.
+
+3
+00:00:08,400 --> 00:00:12,000
+Pat Example: Then I look at the <i>catalogue</i>.
+
+4
+00:00:15,000 --> 00:00:18,000
+Dana Carr: And then?

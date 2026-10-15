@@ -16,3 +16,5 @@ export const UpdateSourceSchema = z.object({
 });
 
 export const DeleteSourceSchema = z.object({ id: idSchema });
+
+export const SetSourceDurationSchema = z.object({ id: idSchema, durationMs: z.number().int().positive().max(24 * 3600 * 1000) });

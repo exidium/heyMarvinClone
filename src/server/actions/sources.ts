@@ -4,7 +4,8 @@ import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
 import { AuthzError, projectIdOfSource, roleAtLeast } from "@/lib/authz";
 import { projectAction } from "@/server/action";
-import { CreateSourceSchema, DeleteSourceSchema, UpdateSourceSchema } from "@/lib/validation/source";
+import { CreateSourceSchema, DeleteSourceSchema, SetSourceDurationSchema, UpdateSourceSchema } from "@/lib/validation/source";
+import { removeSourceDir } from "@/lib/storage";
 
 const refresh = () => revalidatePath("/", "layout");
 
@@ -45,6 +46,12 @@ export const deleteSource = projectAction(DeleteSourceSchema, "EDITOR", (i) => p
     if (n > 0) throw new AuthzError("This source has highlights; only a project admin can delete it.");
   }
   await db.source.delete({ where: { id } });
+  await removeSourceDir(id);
   refresh();
+  return { id };
+});
+
+export const setSourceDuration = projectAction(SetSourceDurationSchema, "VIEWER", (i) => projectIdOfSource(i.id), async ({ id, durationMs }) => {
+  await db.source.updateMany({ where: { id, durationMs: null }, data: { durationMs } });
   return { id };
 });

@@ -35,3 +35,12 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - `ParticipantPicker` searches existing participants and creates one inline, so a person is reused across projects without retyping.
 - Members panel adds users by email with a role; restricted projects are hidden from the list, detail and participant source lists for non-members.
 - Verified: typecheck and lint clean; every page returns 200 for the admin dev user; the restricted project returns 404 for viewer@local and is absent from their list; the "New source" button only renders for editor and admin.
+
+## M4 · Upload, parsers, media (2026-10-15)
+
+- `src/lib/storage.ts`: files under `UPLOAD_DIR/sources/<sourceId>/`, streamed through a byte limiter to a temp file and renamed on success; path-escape guards.
+- Parsers in `src/lib/transcript/`: VTT (voice tags, NOTE/STYLE blocks, markup stripped, entities decoded), SRT (comma timings, `{\an8}` and HTML stripped), DOCX via mammoth (`Name:` prefix, optional leading or inline timestamp), plus `coalesce.ts` that merges fine-grained cues into utterances (D18) and `parse-file.ts` dispatching on extension.
+- `PUT /api/upload/[sourceId]/[kind]`: raw-body upload (D13), extension allowlist (415), size limit (413), highlight lock (409, D20), parse and replace segments, FAILED status with message on parse errors. Replacing a file deletes the previous one.
+- `GET/HEAD /api/media/[sourceId]/[kind]`: single-range streaming (206/416) for recordings, attachment download for transcripts, VIEWER role required.
+- UI: upload panel with drag-and-drop, progress and download links; media player bound to a small zustand store; transcript view where clicking a line seeks and the playing line is marked. Duration is persisted once from the browser's `loadedmetadata`, no ffprobe.
+- Verified: 30 unit tests (parsers, coalescing, storage limiter); curl run on a scratch source: VTT parsed into 5 segments with two speakers, DOCX replace, `.pdf` → 415, 5 KB recording stored, `Range: 100-199` → 206 with correct `Content-Range`, bad range → 416, downloaded bytes identical, viewer gets 403 on upload and 200 on playback, seeded source with highlights → 409.

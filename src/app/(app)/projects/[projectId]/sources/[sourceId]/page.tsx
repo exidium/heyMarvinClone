@@ -3,10 +3,12 @@ import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Badge } from "@/components/ui/badge";
 import { SourceActions } from "@/components/sources/SourceActions";
+import { UploadPanel } from "@/components/sources/UploadPanel";
+import { MediaPlayer } from "@/components/transcript/MediaPlayer";
+import { TranscriptView } from "@/components/transcript/TranscriptView";
 import { requireUser } from "@/lib/auth";
 import { roleAtLeast } from "@/lib/authz";
 import { formatDate, plural } from "@/lib/format";
-import { formatClock } from "@/lib/transcript/time";
 import { getSourceForUser } from "@/server/queries/sources";
 
 export default async function SourcePage({ params }: PageProps<"/projects/[projectId]/sources/[sourceId]">) {
@@ -17,6 +19,7 @@ export default async function SourcePage({ params }: PageProps<"/projects/[proje
   const { source, role } = data;
   const canEdit = roleAtLeast(role, "EDITOR");
   const participants = source.participants.map((sp) => sp.participant);
+  const hasRecording = !!source.recordingPath;
 
   return (
     <>
@@ -33,23 +36,29 @@ export default async function SourcePage({ params }: PageProps<"/projects/[proje
         }
         actions={canEdit ? <SourceActions projectId={projectId} source={{ id: source.id, title: source.title, date: source.date, participants }} /> : null}
       />
-      <div className="p-6">
-        {/* Read-only rendering until the transcript editor milestone. */}
-        {source.segments.length ? (
-          <ol className="mx-auto flex max-w-3xl flex-col gap-3 text-sm">
-            {source.segments.map((s) => (
-              <li key={s.id} className="grid grid-cols-[140px_1fr] gap-3">
-                <div className="truncate text-xs text-muted-foreground">
-                  <span className="font-medium text-foreground">{s.speaker ?? ""}</span>
-                  {s.startMs != null ? <span className="ml-1 tabular-nums">{formatClock(s.startMs)}</span> : null}
-                </div>
-                <p className="whitespace-pre-wrap">{s.text}</p>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <p className="text-sm text-muted-foreground">No transcript yet. Upload arrives in the next milestone.</p>
-        )}
+      <div className="grid gap-6 p-6 lg:grid-cols-[1fr_360px]">
+        <section className="min-w-0">
+          {source.segments.length ? (
+            <TranscriptView segments={source.segments} hasRecording={hasRecording} />
+          ) : (
+            <p className="text-sm text-muted-foreground">{canEdit ? "Upload a transcript to get started." : "No transcript yet."}</p>
+          )}
+        </section>
+        <aside className="flex flex-col gap-4 lg:sticky lg:top-4 lg:self-start">
+          {hasRecording ? <MediaPlayer sourceId={source.id} mime={source.recordingMime} durationMs={source.durationMs} /> : null}
+          <div>
+            <h2 className="mb-2 text-sm font-medium">Files</h2>
+            <UploadPanel
+              sourceId={source.id}
+              transcriptName={source.transcriptName}
+              recordingName={source.recordingName}
+              highlightCount={source._count.highlights}
+              canEdit={canEdit}
+              status={source.status}
+              errorMessage={source.errorMessage}
+            />
+          </div>
+        </aside>
       </div>
     </>
   );
