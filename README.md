@@ -26,6 +26,7 @@ Local development uses the dev auth seam (`AUTH_DISABLED=true`, pick `DEV_USER=a
 - `documentation/architecture.md`: folder layout and the main mechanisms.
 - `documentation/milestones.md`: what each milestone delivered and how it was verified.
 - `documentation/deploy.md`: Hetzner deployment, releases, backups.
+- `documentation/heymarvin-feature-gap.md`: what HeyMarvin offers, what this repository has, and what is still missing.
 
 ## Tests
 
