@@ -27,3 +27,11 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - `src/server/import/dovetail.ts` upserts everything by external id (idempotent); tags are deduplicated case-insensitively and remember every mirror id in `externalIds`.
 - `prisma/seed.ts` truncates content tables, upserts the three dev users, imports `MIRROR_DIR`, and makes the Block Diagramming project RESTRICTED with editor@local as EDITOR.
 - Verified: 17 unit tests pass; seed reports 6 projects, 30 sources, 955 segments, 30 participants, 41 tags in 8 groups, 174 highlights (146 exact, 19 normalised, 7 by time, 2 orphaned). A SQL check confirms every ACTIVE single-segment highlight's text equals the slice of its segment at the stored offsets.
+
+## M3 · Projects, participants, sources (2026-10-15)
+
+- Pages: `/projects` (list, show archived toggle, new project dialog), `/projects/[id]` (header, goal, sources table, participants, members panel, edit/archive/delete), `/projects/[id]/sources/[id]` (read-only transcript until M5, edit/delete), `/participants` (search, new), `/participants/[id]` (attributes, sources, edit/delete). Placeholders for `/search` and `/tags`.
+- Server actions in `src/server/actions/{projects,participants,sources}.ts`, all through `authedAction`/`projectAction`; zod schemas in `src/lib/validation/`; queries in `src/server/queries/`.
+- `ParticipantPicker` searches existing participants and creates one inline, so a person is reused across projects without retyping.
+- Members panel adds users by email with a role; restricted projects are hidden from the list, detail and participant source lists for non-members.
+- Verified: typecheck and lint clean; every page returns 200 for the admin dev user; the restricted project returns 404 for viewer@local and is absent from their list; the "New source" button only renders for editor and admin.
