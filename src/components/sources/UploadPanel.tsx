@@ -68,7 +68,7 @@ export function UploadPanel({ sourceId, transcriptName, recordingName, highlight
           </div>
         </div>
         <div className="flex shrink-0 items-center gap-1">
-          {name ? <Button variant="ghost" size="icon-sm" aria-label={`Download ${label}`} render={<a href={`/api/media/${sourceId}/${kind}`} download />}><Download className="size-4" /></Button> : null}
+          {name ? <Button variant="ghost" size="icon-sm" nativeButton={false} aria-label={`Download ${label}`} render={<a href={`/api/media/${sourceId}/${kind}`} download />}><Download className="size-4" /></Button> : null}
           {canEdit ? (
             <>
               <input ref={inputs[kind]} type="file" accept={ACCEPT[kind]} className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) upload(kind, f); e.target.value = ""; }} />

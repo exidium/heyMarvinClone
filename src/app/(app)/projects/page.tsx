@@ -25,7 +25,7 @@ export default async function ProjectsPage({ searchParams }: PageProps<"/project
         description="Studies, their sources and participants."
         actions={
           <>
-            <Button variant="ghost" size="sm" render={<a href={includeArchived ? "/projects" : "/projects?archived=1"} />}>
+            <Button variant="ghost" size="sm" nativeButton={false} render={<a href={includeArchived ? "/projects" : "/projects?archived=1"} />}>
               {includeArchived ? "Hide archived" : "Show archived"}
             </Button>
             {newButton}
