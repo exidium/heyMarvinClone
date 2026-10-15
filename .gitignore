@@ -1,0 +1,18 @@
+/node_modules
+/.next/
+/out/
+/build
+/coverage
+.DS_Store
+*.pem
+npm-debug.log*
+.pnpm-debug.log*
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+/src/generated/
+/test-results/
+/playwright-report/
+# user uploads (transcripts + recordings) live outside git
+/uploads/

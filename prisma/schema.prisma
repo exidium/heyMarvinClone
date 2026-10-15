@@ -1,0 +1,299 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------- users, sessions, roles ----------
+
+enum ProjectRole {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+enum ProjectAccess {
+  OPEN
+  RESTRICTED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  passwordHash String? // null until the auth milestone
+  isAdmin      Boolean  @default(false) // manages users, tags and deletions
+  createdAt    DateTime @default(now())
+
+  sessions      Session[]
+  memberships   ProjectMember[]
+  ownedProjects Project[]       @relation("ProjectOwner")
+  highlights    Highlight[]     @relation("HighlightCreatedBy")
+  savedViews    SavedView[]
+  insights      Insight[]
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique // sha256 of the cookie token
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+// ---------- projects ----------
+
+model Project {
+  id          String        @id @default(cuid())
+  name        String
+  goal        String?
+  productArea String?
+  startDate   DateTime?
+  endDate     DateTime?
+  access      ProjectAccess @default(OPEN)
+  ownerId     String
+  externalId  String?       @unique // Dovetail project id (import idempotency)
+  archivedAt  DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  owner    User            @relation("ProjectOwner", fields: [ownerId], references: [id])
+  members  ProjectMember[]
+  sources  Source[]
+  insights Insight[]
+
+  @@index([productArea])
+  @@index([startDate])
+}
+
+model ProjectMember {
+  projectId String
+  userId    String
+  role      ProjectRole @default(VIEWER)
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, userId])
+}
+
+// ---------- participants (global, reusable across projects) ----------
+
+model Participant {
+  id        String   @id @default(cuid())
+  name      String // name or alias
+  role      String?
+  company   String?
+  segment   String?
+  toolsUsed String[] @default([])
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sources  SourceParticipant[]
+  segments Segment[]
+
+  @@index([company])
+  @@index([segment])
+  @@index([role])
+}
+
+// ---------- sources and segments ----------
+
+enum SourceKind {
+  TRANSCRIPT
+  NOTE
+}
+
+enum SourceStatus {
+  EMPTY
+  PROCESSING
+  READY
+  FAILED
+}
+
+model Source {
+  id             String       @id @default(cuid())
+  projectId      String
+  title          String
+  kind           SourceKind   @default(TRANSCRIPT)
+  status         SourceStatus @default(EMPTY)
+  date           DateTime?
+  transcriptPath String? // relative to UPLOAD_DIR; original file is kept
+  transcriptName String?
+  recordingPath  String?
+  recordingName  String?
+  recordingMime  String?
+  recordingBytes BigInt?
+  durationMs     Int?
+  externalId     String?      @unique // Dovetail note id
+  errorMessage   String?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  project      Project             @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  participants SourceParticipant[]
+  segments     Segment[]
+  highlights   Highlight[]
+
+  @@index([projectId, date])
+}
+
+model SourceParticipant {
+  sourceId      String
+  participantId String
+  speakerLabel  String? // transcript speaker name that maps to this participant
+
+  source      Source      @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  participant Participant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+
+  @@id([sourceId, participantId])
+  @@index([participantId])
+}
+
+model Segment {
+  id            String  @id @default(cuid())
+  sourceId      String
+  order         Int
+  speaker       String?
+  participantId String?
+  startMs       Int?
+  endMs         Int?
+  text          String
+  version       Int     @default(1) // optimistic lock for per-segment saves
+  /// GENERATED ALWAYS AS to_tsvector('english', text) STORED — see the search_vectors migration
+  search        Unsupported("tsvector")?
+
+  source      Source       @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  participant Participant? @relation(fields: [participantId], references: [id], onDelete: SetNull)
+
+  startsHighlights Highlight[] @relation("HighlightStart")
+  endsHighlights   Highlight[] @relation("HighlightEnd")
+
+  @@unique([sourceId, order])
+  @@index([sourceId, startMs])
+}
+
+// ---------- highlights and tags ----------
+
+enum HighlightStatus {
+  ACTIVE
+  ORPHANED // its text was deleted from the transcript; kept, never silently dropped
+}
+
+model Highlight {
+  id             String          @id @default(cuid())
+  sourceId       String
+  startSegmentId String
+  startOffset    Int
+  endSegmentId   String
+  endOffset      Int
+  text           String
+  status         HighlightStatus @default(ACTIVE)
+  note           String?
+  createdById    String?
+  externalId     String?         @unique // Dovetail highlight id
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  /// GENERATED ALWAYS AS to_tsvector('english', text || ' ' || note) STORED
+  search         Unsupported("tsvector")?
+
+  source       Source  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  startSegment Segment @relation("HighlightStart", fields: [startSegmentId], references: [id], onDelete: Restrict)
+  endSegment   Segment @relation("HighlightEnd", fields: [endSegmentId], references: [id], onDelete: Restrict)
+  createdBy    User?   @relation("HighlightCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+
+  tags     HighlightTag[]
+  insights InsightHighlight[]
+
+  @@index([sourceId])
+  @@index([startSegmentId])
+  @@index([endSegmentId])
+  @@index([createdAt])
+}
+
+model TagGroup {
+  id       String  @id @default(cuid())
+  name     String  @unique
+  position Int     @default(0)
+  color    String?
+
+  tags Tag[]
+}
+
+model Tag {
+  id          String    @id @default(cuid())
+  name        String    @unique // plus a unique index on lower(name) in the search_vectors migration
+  groupId     String?
+  color       String?
+  description String?
+  archivedAt  DateTime?
+  externalIds String[]  @default([]) // Dovetail tag ids merged into this tag
+
+  group      TagGroup?      @relation(fields: [groupId], references: [id], onDelete: SetNull)
+  highlights HighlightTag[]
+
+  @@index([groupId])
+  @@index([archivedAt])
+}
+
+model HighlightTag {
+  highlightId String
+  tagId       String
+  createdAt   DateTime @default(now())
+
+  highlight Highlight @relation(fields: [highlightId], references: [id], onDelete: Cascade)
+  tag       Tag       @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([highlightId, tagId])
+  @@index([tagId])
+}
+
+// ---------- saved views ----------
+
+model SavedView {
+  id        String   @id @default(cuid())
+  name      String
+  ownerId   String
+  isShared  Boolean  @default(false)
+  filters   Json // SearchFilters shape, validated with zod
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+}
+
+// ---------- insights (v2: schema only, no UI in v1) ----------
+
+model Insight {
+  id          String   @id @default(cuid())
+  projectId   String?
+  statement   String
+  description String?
+  confidence  String?
+  productArea String?
+  createdById String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  project    Project?           @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  createdBy  User?              @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  highlights InsightHighlight[]
+}
+
+model InsightHighlight {
+  insightId   String
+  highlightId String
+
+  insight   Insight   @relation(fields: [insightId], references: [id], onDelete: Cascade)
+  highlight Highlight @relation(fields: [highlightId], references: [id], onDelete: Cascade)
+
+  @@id([insightId, highlightId])
+}
