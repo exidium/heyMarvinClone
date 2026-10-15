@@ -88,3 +88,4 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - Schema declares the generated search columns and GIN indexes so Prisma sees no drift (D48); the themes migration restores the indexes the first failed run dropped.
 - Verified: typecheck and lint clean; all pivots and node types render with the seeded data; Playwright `tests/e2e/explore.spec.ts` covers tree navigation, list narrowing, keyboard selection, detail pane, theme creation, drag-and-drop, picker add, nesting, removal and deletion.
 - Dev-server note: the page reload loop seen on `/tags` earlier recurred on every page; a clean `.next` (stop, `rm -rf .next`, start) fixed it. Recorded in AGENTS.md.
+- Follow-up the same day: the explorer moved to its own route group `(explore)` with a top bar and no sidebar; a keyword search in the top bar (`q` in the URL) narrows the tree counts and the list (D49). Covered by a third Playwright test.

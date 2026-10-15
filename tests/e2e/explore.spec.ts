@@ -99,3 +99,21 @@ test("themes: create, drag a highlight in, add via picker, nest, remove, delete"
   expect(after.parentLeft).toBe(0);
   expect(after.subParent).toBeNull();
 });
+
+test("the top-bar search narrows the list and the tree counts, without the repository sidebar", async ({ page }) => {
+  await page.goto("/explore");
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("link", { name: "Participants" })).toHaveCount(0);
+  const before = Number(await page.getByRole("button", { name: /All highlights/ }).locator("span").last().textContent());
+  await page.getByRole("searchbox", { name: "Search highlights" }).fill("spreadsheet");
+  await page.keyboard.press("Enter");
+  await expect(page).toHaveURL(/q=spreadsheet/);
+  await expect(page.getByRole("heading", { level: 2, name: /matching “spreadsheet”/ })).toBeVisible();
+  const after = Number(await page.getByRole("button", { name: /All highlights/ }).locator("span").last().textContent());
+  expect(after).toBeGreaterThan(0);
+  expect(after).toBeLessThan(before);
+  const texts = await page.locator("ol [data-id] blockquote").allTextContents();
+  expect(texts.every((t) => /spreadsheet/i.test(t))).toBe(true);
+  await page.getByRole("button", { name: "Clear search" }).click();
+  await expect(page).not.toHaveURL(/q=/);
+});

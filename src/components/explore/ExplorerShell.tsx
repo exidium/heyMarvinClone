@@ -2,27 +2,23 @@
 
 import { useCallback, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { useQueryStates, parseAsString, parseAsStringLiteral } from "nuqs";
+import { useQueryStates } from "nuqs";
 import { toast } from "sonner";
 import { TreePane } from "./TreePane";
 import { HighlightList } from "./HighlightList";
 import { DetailPane } from "./DetailPane";
 import { ThemeDialog, type ThemeInitial } from "./ThemeDialog";
 import { ThemeHeader } from "./ThemeHeader";
-import { findNode, parseKey, PIVOTS, type Pivot, type TreeNode } from "@/lib/explore";
+import { findNode, parseKey, type Pivot, type TreeNode } from "@/lib/explore";
+import { exploreParsers } from "@/components/explore/explore-params";
 import { addToTheme } from "@/server/actions/themes";
 import type { ExplorerHighlight } from "@/server/queries/explore";
-
-export const exploreParsers = {
-  pivot: parseAsStringLiteral(PIVOTS).withDefault("projects"),
-  node: parseAsString.withDefault(""),
-  h: parseAsString,
-};
 
 type ThemeOption = { id: string; title: string; parentId: string | null };
 type Props = {
   pivot: Pivot;
   node: string;
+  q: string;
   tree: TreeNode[];
   total: number;
   rows: ExplorerHighlight[];
@@ -35,7 +31,7 @@ type Props = {
   initialHighlightId: string | null;
 };
 
-export function ExplorerShell({ pivot, node, tree, total, rows, listTotal, themes, theme, productAreas, userId, isAdmin, initialHighlightId }: Props) {
+export function ExplorerShell({ pivot, node, q, tree, total, rows, listTotal, themes, theme, productAreas, userId, isAdmin, initialHighlightId }: Props) {
   const router = useRouter();
   const [, setParams] = useQueryStates(exploreParsers, { shallow: false, history: "push" });
   const [selectedId, setSelectedId] = useState<string | null>(initialHighlightId ?? rows[0]?.id ?? null);
@@ -59,11 +55,12 @@ export function ExplorerShell({ pivot, node, tree, total, rows, listTotal, theme
   }, [themes, refresh]);
 
   const key = parseKey(node);
-  const title = node === "" ? "All highlights" : findNode(tree, node)?.label ?? "Highlights";
+  const base = node === "" ? "All highlights" : findNode(tree, node)?.label ?? "Highlights";
+  const title = q ? `${base} · matching “${q}”` : base;
   const currentThemeId = key.kind === "theme" ? key.id ?? null : null;
 
   return (
-    <div className="grid min-h-0 flex-1 grid-cols-[280px_minmax(0,1fr)_minmax(320px,38%)] gap-4 p-4" style={{ height: "calc(100vh - 57px)" }}>
+    <div className="grid min-h-0 flex-1 grid-cols-[280px_minmax(0,1fr)_minmax(320px,38%)] gap-4 p-4" style={{ height: "calc(100vh - 3.25rem)" }}>
       <aside className="min-h-0 overflow-hidden rounded-lg border p-2">
         <TreePane pivot={pivot} nodes={tree} selected={node} total={total} onSelectPivot={selectPivot} onSelectNode={selectNode} onDropHighlights={dropOnTheme} onNewTheme={(parentId) => setDialog({ open: true, parentId })} />
       </aside>

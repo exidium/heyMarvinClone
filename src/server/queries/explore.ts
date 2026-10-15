@@ -5,8 +5,22 @@ import { Prisma, type User } from "@/generated/prisma/client";
 import { formatKey, NONE, parseKey, type NodeKey, type Pivot, type TreeNode } from "@/lib/explore";
 import { tagSelect } from "@/server/queries/tags";
 
-/** Highlights the user may see: ACTIVE, in a visible project. */
-const visibleHighlights = (user: User): Prisma.HighlightWhereInput => ({ status: "ACTIVE", source: { project: visibleProjectsWhere(user) } });
+/** Highlights the user may see: ACTIVE, in a visible project, and matching the keyword when one is set. */
+const visibleHighlights = (user: User, matchIds?: string[] | null): Prisma.HighlightWhereInput => ({
+  status: "ACTIVE",
+  source: { project: visibleProjectsWhere(user) },
+  ...(matchIds ? { id: { in: matchIds } } : {}),
+});
+
+/** Ids of highlights whose text matches a websearch query; null when there is no query. */
+export async function keywordMatchIds(q: string): Promise<string[] | null> {
+  const query = q.trim();
+  if (!query) return null;
+  const rows = await db.$queryRaw<{ id: string }[]>`SELECT "id" FROM "Highlight" WHERE "search" @@ websearch_to_tsquery('english', ${query})`;
+  return rows.map((r) => r.id);
+}
+
+const keywordSql = (q: string) => (q.trim() ? Prisma.sql`AND h."search" @@ websearch_to_tsquery('english', ${q.trim()})` : Prisma.empty);
 
 export const explorerHighlightSelect = {
   id: true, text: true, startSegmentId: true, startOffset: true, endSegmentId: true, endOffset: true, createdAt: true, note: true,
@@ -36,13 +50,15 @@ function accessSql(user: User) {
     : Prisma.sql`(p."access" = 'OPEN' OR p."ownerId" = ${user.id} OR EXISTS (SELECT 1 FROM "ProjectMember" pm WHERE pm."projectId" = p."id" AND pm."userId" = ${user.id}))`;
 }
 
-export async function buildTree(user: User, pivot: Pivot): Promise<TreeNode[]> {
+export async function buildTree(user: User, pivot: Pivot, q = ""): Promise<TreeNode[]> {
   const access = accessSql(user);
+  const kw = keywordSql(q);
+  const matchIds = await keywordMatchIds(q);
   if (pivot === "projects") {
     const rows = await db.$queryRaw<Row[]>`
       SELECT p."productArea" AS area, p."id" AS pid, p."name" AS pname, s."id" AS sid, s."title" AS stitle, g."speaker" AS speaker, count(*) AS n
       FROM "Highlight" h JOIN "Source" s ON s."id" = h."sourceId" JOIN "Project" p ON p."id" = s."projectId" JOIN "Segment" g ON g."id" = h."startSegmentId"
-      WHERE h."status" = 'ACTIVE' AND ${access}
+      WHERE h."status" = 'ACTIVE' AND ${access} ${kw}
       GROUP BY 1,2,3,4,5,6`;
     return [...group(rows, (r) => r.area).entries()].map(([area, ar]) => ({
       key: formatKey({ kind: "area", id: area ?? NONE }), label: area ?? "No product area", count: sum(ar),
@@ -60,9 +76,9 @@ export async function buildTree(user: User, pivot: Pivot): Promise<TreeNode[]> {
       SELECT tg."id" AS gid, tg."name" AS gname, t."id" AS tid, t."name" AS tname, count(*) AS n
       FROM "HighlightTag" ht JOIN "Tag" t ON t."id" = ht."tagId" LEFT JOIN "TagGroup" tg ON tg."id" = t."groupId"
       JOIN "Highlight" h ON h."id" = ht."highlightId" JOIN "Source" s ON s."id" = h."sourceId" JOIN "Project" p ON p."id" = s."projectId"
-      WHERE h."status" = 'ACTIVE' AND t."archivedAt" IS NULL AND ${access}
+      WHERE h."status" = 'ACTIVE' AND t."archivedAt" IS NULL AND ${access} ${kw}
       GROUP BY 1,2,3,4`;
-    const untagged = await db.highlight.count({ where: { ...visibleHighlights(user), tags: { none: {} } } });
+    const untagged = await db.highlight.count({ where: { ...visibleHighlights(user, matchIds), tags: { none: {} } } });
     const groups = [...group(rows, (r) => r.gid).entries()].map(([gid, gr]) => ({
       key: formatKey({ kind: "group", id: gid ?? NONE }), label: gr[0].gname ?? "Ungrouped", count: sum(gr),
       children: gr.map((r) => ({ key: formatKey({ kind: "tag", id: r.tid! }), label: r.tname!, count: num(r.n) })).sort(byLabel),
@@ -74,9 +90,9 @@ export async function buildTree(user: User, pivot: Pivot): Promise<TreeNode[]> {
       SELECT pa."segment" AS seg, pa."company" AS company, pa."id" AS paid, pa."name" AS paname, count(DISTINCT h."id") AS n
       FROM "Highlight" h JOIN "Source" s ON s."id" = h."sourceId" JOIN "Project" p ON p."id" = s."projectId"
       JOIN "SourceParticipant" sp ON sp."sourceId" = s."id" JOIN "Participant" pa ON pa."id" = sp."participantId"
-      WHERE h."status" = 'ACTIVE' AND ${access}
+      WHERE h."status" = 'ACTIVE' AND ${access} ${kw}
       GROUP BY 1,2,3,4`;
-    const none = await db.highlight.count({ where: { ...visibleHighlights(user), source: { ...(visibleHighlights(user).source as object), participants: { none: {} } } } });
+    const none = await db.highlight.count({ where: { ...visibleHighlights(user, matchIds), source: { ...(visibleHighlights(user).source as object), participants: { none: {} } } } });
     const segs = [...group(rows, (r) => r.seg).entries()].map(([seg, sr]) => ({
       key: formatKey({ kind: "segment", id: seg ?? NONE }), label: seg ?? "No segment", count: sum(sr),
       children: [...group(sr, (r) => r.company).entries()].map(([company, cr]) => ({
@@ -92,8 +108,8 @@ export async function buildTree(user: User, pivot: Pivot): Promise<TreeNode[]> {
     db.$queryRaw<Row[]>`
       SELECT th."themeId" AS tid, count(*) AS n FROM "ThemeHighlight" th
       JOIN "Highlight" h ON h."id" = th."highlightId" JOIN "Source" s ON s."id" = h."sourceId" JOIN "Project" p ON p."id" = s."projectId"
-      WHERE h."status" = 'ACTIVE' AND ${access} GROUP BY 1`,
-    db.highlight.count({ where: { ...visibleHighlights(user), themes: { none: {} } } }),
+      WHERE h."status" = 'ACTIVE' AND ${access} ${kw} GROUP BY 1`,
+    db.highlight.count({ where: { ...visibleHighlights(user, matchIds), themes: { none: {} } } }),
   ]);
   const countOf = new Map(counts.map((r) => [r.tid, num(r.n)]));
   const build = (parentId: string | null): TreeNode[] =>
@@ -128,9 +144,10 @@ function nodeWhere(key: NodeKey): Prisma.HighlightWhereInput {
 
 export const LIST_PAGE = 60;
 
-export async function listHighlightsUnder(user: User, rawKey: string, page = 1) {
+export async function listHighlightsUnder(user: User, rawKey: string, q = "", page = 1) {
   const key = parseKey(rawKey);
-  const where: Prisma.HighlightWhereInput = { AND: [visibleHighlights(user), nodeWhere(key)] };
+  const matchIds = await keywordMatchIds(q);
+  const where: Prisma.HighlightWhereInput = { AND: [visibleHighlights(user, matchIds), nodeWhere(key)] };
   const orderBy: Prisma.HighlightOrderByWithRelationInput[] = key.kind === "theme"
     ? [{ createdAt: "asc" }]
     : [{ source: { date: "desc" } }, { source: { title: "asc" } }, { startSegment: { order: "asc" } }, { startOffset: "asc" }];
@@ -145,6 +162,10 @@ export async function listHighlightsUnder(user: User, rawKey: string, page = 1) 
     rows.sort((a, b) => (rank.get(a.id) ?? 0) - (rank.get(b.id) ?? 0));
   }
   return { rows, total };
+}
+
+export async function countVisible(user: User, q = "") {
+  return db.highlight.count({ where: visibleHighlights(user, await keywordMatchIds(q)) });
 }
 
 export async function getTheme(id: string) {

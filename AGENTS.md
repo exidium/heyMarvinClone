@@ -18,3 +18,4 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 - If `next dev` starts reloading every page continuously ("[Fast Refresh] rebuilding" with no file changes), stop it, `rm -rf .next`, and start it again. Stale state in `.next` (after a production build or `prisma generate` while dev was running) causes it; it is not a code problem.
+- Adding a new export to a server module that `next dev` has already compiled can leave the running server with the old module ("X is not a function" although the export exists). Restart `next dev` after adding exports to existing server files.
