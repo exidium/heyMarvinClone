@@ -1,0 +1,59 @@
+{
+  "project_id": "m5wwMhmHPhSXSIk4HlHGSU",
+  "count": 5,
+  "participants": [
+    {
+      "name": "Guy Maggio",
+      "role": "RF engineer",
+      "company": "Ferry, Swift and Jast",
+      "segment": "Enterprise",
+      "tools_used": [
+        "RFCascade",
+        "LTspice-like sim"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Miss Tara Bahringer",
+      "role": "Power engineer",
+      "company": "Dickinson and Sons",
+      "segment": "Mid-market",
+      "tools_used": [
+        "LTspice-like sim",
+        "KiCad",
+        "Excel"
+      ],
+      "notes": "Careo umquam suadeo cur abscido dolores communis iste cibo temeritas."
+    },
+    {
+      "name": "Kaya Wuckert",
+      "role": "Design lead",
+      "company": "Kovacek, Gulgowski and Jaskolski",
+      "segment": "Enterprise",
+      "tools_used": [
+        "PowerPlanner"
+      ],
+      "notes": "Tempora cohibeo repellat caecus crux caritas caelestis spectaculum summopere cresco."
+    },
+    {
+      "name": "Cortney White",
+      "role": "Design lead",
+      "company": "Grimes - Schuster",
+      "segment": "Academic",
+      "tools_used": [
+        "LTspice-like sim"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Jeffry Robel",
+      "role": "Power engineer",
+      "company": "Nolan LLC",
+      "segment": "Academic",
+      "tools_used": [
+        "SpiceBench"
+      ],
+      "notes": "Cuppedia textus decerno clibanus sollicito ustilo caput talio tener."
+    }
+  ]
+}

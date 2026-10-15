@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "xXjnzNi2dDKIza9VCAKF5E",
+    "url": "https://example.invalid/projects/xXjnzNi2dDKIza9VCAKF5E",
+    "author": {
+      "id": "OOzVHZ0JqKIWuDV3L6hLsK",
+      "name": "Example, Researcher"
+    },
+    "title": "2026-07 Discovery - RF Engineer Workflows",
+    "type": "project",
+    "created_at": "2026-06-15T23:12:20.803+00:00",
+    "deleted": false,
+    "folder": {
+      "id": "YR07FeI9uwWSg7YLjuFf4p"
+    },
+    "overview": "# Research Overview: 2026-07 Discovery - RF Engineer Workflows\n\n## Research Questions\n\n1. Uredo beatus caelestis acervus dolorum verus cunabula asperiores.\n2. Nam usque quos quibusdam tepesco recusandae ambulo bardus textor.\n\n## Methodology\n\n* Semi-structured interviews, 60 minutes\n* Participants: 4\n"
+  }
+}

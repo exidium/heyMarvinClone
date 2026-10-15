@@ -1,0 +1,70 @@
+{
+  "project_id": "jWP6F26rKCYFgolGxEuhlT",
+  "count": 6,
+  "participants": [
+    {
+      "name": "Dr. Eulalia Torphy",
+      "role": "Hardware engineer",
+      "company": "Boyer Inc",
+      "segment": "Startup",
+      "tools_used": [
+        "SignalForge"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Uriah Murphy",
+      "role": "Power engineer",
+      "company": "Kuhn and Sons",
+      "segment": "Internal",
+      "tools_used": [
+        "KiCad",
+        "Datasheet Finder"
+      ],
+      "notes": "Crinis antea animi abbas volva accusantium tactus dedecor tredecim."
+    },
+    {
+      "name": "Jason Mraz V",
+      "role": "Systems architect",
+      "company": "Robel LLC",
+      "segment": "Internal",
+      "tools_used": [
+        "PowerPlanner",
+        "SignalForge"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Karson Douglas",
+      "role": "FAE",
+      "company": "Lesch LLC",
+      "segment": "Internal",
+      "tools_used": [
+        "LTspice-like sim"
+      ],
+      "notes": "Textus velociter tergo unde excepturi."
+    },
+    {
+      "name": "Burley Harvey",
+      "role": "RF engineer",
+      "company": "Ritchie - Kunde",
+      "segment": "Startup",
+      "tools_used": [
+        "PowerPlanner"
+      ],
+      "notes": "Eos auxilium fugit dolorum valde utor vulgus volo."
+    },
+    {
+      "name": "Maud Sauer",
+      "role": "Power engineer",
+      "company": "Boyle, Hilpert and Brekke",
+      "segment": "Startup",
+      "tools_used": [
+        "RFCascade",
+        "Datasheet Finder",
+        "KiCad"
+      ],
+      "notes": ""
+    }
+  ]
+}

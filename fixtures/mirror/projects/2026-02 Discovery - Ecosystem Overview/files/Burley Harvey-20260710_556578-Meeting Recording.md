@@ -1,0 +1,91 @@
+[AudioVideo click to see in Dovetail](https://example.invalid/data/TeVn8tk87L1tgi1SdlKyA4)
+#### Transcript
+**Researcher (0:17):** Can you walk me through how a typical project starts for you? 
+
+**Burley Harvey (0:42):** Our stage names do not match what the vendor calls them, so onboarding juniors is painful. Curto dolorem supplanto degero amet odio territo. 
+
+**Researcher (1:09):** What happens after you have the requirements? 
+
+**Burley Harvey (1:34):** The evaluation board saved us, the simulator did not. 
+
+**Researcher (2:14):** Which tools are open on your screen at that point? 
+
+**Burley Harvey (2:20):** Most of my day is finding the right part number, not designing. 
+
+**Researcher (2:42):** Where does it usually go wrong? 
+
+**Burley Harvey (3:00):** I searched for the thermal derating curve and gave up after ten minutes. I searched for the thermal derating curve and gave up after ten minutes. 
+
+**Researcher (3:20):** How do you compare parts across vendors? 
+
+**Burley Harvey (3:53):** Honestly I do not trust the AI assistant for numbers, I use it to draft emails. 
+
+**Researcher (4:36):** What role does support play in that decision? 
+
+**Burley Harvey (5:02):** Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. Demoror utroque arbor abduco videlicet sophismata demoror bestia argentum. Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. 
+
+**Researcher (5:18):** Have you tried any AI features in those tools? 
+
+**Burley Harvey (5:48):** We moved to the competitor because their models were already in our simulator. Censura strues tabula occaecati verus universe capio aegrus tempus. 
+
+**Researcher (6:29):** If you could change one thing about that step, what would it be? 
+
+**Burley Harvey (7:13):** The evaluation board saved us, the simulator did not. Supellex apud maxime deleo spiritus. 
+
+**Researcher (7:28):** How do you hand your work over to layout? 
+
+**Burley Harvey (7:53):** I searched for the thermal derating curve and gave up after ten minutes. Thermae cohibeo suadeo vaco comminor solus. 
+
+**Researcher (8:28):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (9:12):** Our stage names do not match what the vendor calls them, so onboarding juniors is painful. 
+
+**Researcher (9:44):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (10:16):** Selecting the amplifier took two days because I could not compare noise figures across vendors. Aliquid vilitas aveho vaco carus vulnero tempora facere. Most of my day is finding the right part number, not designing. 
+
+**Researcher (10:32):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (11:16):** Honestly I do not trust the AI assistant for numbers, I use it to draft emails. Esse theologus terreo inflammatio tristis tamen dolorem. 
+
+**Researcher (11:53):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (12:11):** Our stage names do not match what the vendor calls them, so onboarding juniors is painful. Una stillicidium succedo. 
+
+**Researcher (12:35):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (13:06):** We redraw the schematic from scratch when the tool chain changes, every single time. Acceptus coepi cunae totus vos vinco constans. 
+
+**Researcher (13:26):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (13:56):** If the FAE answers in a day I stay with the vendor, if it takes a week I move on. I would pay for a tool that keeps the parameters in sync between selection and layout. 
+
+**Researcher (14:34):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (15:00):** I searched for the thermal derating curve and gave up after ten minutes. 
+
+**Researcher (15:37):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (15:51):** We moved to the competitor because their models were already in our simulator. Odio usque conturbo complectus cohaero bis triumphus. 
+
+**Researcher (15:57):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (16:12):** Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. Coerceo colligo architecto vinco soluta amitto thesis cerno. 
+
+**Researcher (16:18):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (17:03):** Selecting the amplifier took two days because I could not compare noise figures across vendors. Studio fugit vel valetudo dedico coma aegrus tersus. 
+
+**Researcher (17:31):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (18:09):** Honestly I do not trust the AI assistant for numbers, I use it to draft emails. Tenax eum crudelis usus. Our stage names do not match what the vendor calls them, so onboarding juniors is painful. 
+
+**Researcher (18:24):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (18:52):** We redraw the schematic from scratch when the tool chain changes, every single time. 
+
+**Researcher (19:34):** Thanks, that is really helpful. Anything else you would add? 
+
+**Burley Harvey (20:09):** We redraw the schematic from scratch when the tool chain changes, every single time. Conscendo tempora tricesimus uter. 
+
+**Researcher (20:39):** Thanks, that is really helpful. Anything else you would add? 

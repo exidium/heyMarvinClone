@@ -1,0 +1,451 @@
+{
+  "project_id": "8vTYrnTnPywDoP7RtDeA36",
+  "count": 25,
+  "highlights": [
+    {
+      "id": "iQb7f37IL44pHlLwjir4rg",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=iQb7f37IL44pHlLwjir4rg",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [],
+      "text": "I tried the online search",
+      "type": "highlight",
+      "start_time": 1222.2,
+      "end_time": 1373.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "YrTmdBVrx4COBq2yRV9BNR",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=YrTmdBVrx4COBq2yRV9BNR",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "K8fhmpNGk8LdlCV4VWZcYS",
+          "title": "AI future potential"
+        },
+        {
+          "id": "oQeEXBnGbtxv5cJzjnbuBj",
+          "title": "Trust"
+        }
+      ],
+      "text": "know and only then look at the catalogue. Damno",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "A1f9PgbZA0NZ3P1LUp4Hos",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=A1f9PgbZA0NZ3P1LUp4Hos",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "u9UI010anUzxbzps6H4c4E",
+          "title": "Power tool request"
+        },
+        {
+          "id": "AY2HjKKrUZiFiUxFNfFIC7",
+          "title": "Selection friction"
+        }
+      ],
+      "text": "We redraw the schematic from scratch when the tool chain changes, every single time. Tum defungo acquiro arbustum uter sol demergo aptus.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "gFZgyuLlsFQaLpshxP8Qx7",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=gFZgyuLlsFQaLpshxP8Qx7",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "SoqdUlI1QU69rqOeY5cDvI",
+          "title": "Site findability friction"
+        }
+      ],
+      "text": "We keep a spreadsheet with every component we ever qualified, that is the real library. We moved to the competitor because their models were already in our simulator.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "mjlLcb0Sqc9OhgKiYHXDxN",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=mjlLcb0Sqc9OhgKiYHXDxN",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [],
+      "text": "Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. Avaritia velit pariatur.",
+      "type": "highlight",
+      "start_time": 573.2,
+      "end_time": 581.5,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "dpzWVNskuyCqsPCDtNV8tY",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=dpzWVNskuyCqsPCDtNV8tY",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [],
+      "text": "I would pay for a tool that keeps the parameters in sync between selection and layout.",
+      "type": "highlight",
+      "start_time": 1385.2,
+      "end_time": 1566.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "dGri283am4Te0yLR4Pb3bo",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=dGri283am4Te0yLR4Pb3bo",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "AY2HjKKrUZiFiUxFNfFIC7",
+          "title": "Selection friction"
+        }
+      ],
+      "text": "The evaluation board saved us, the simulator did not. Itaque quibusdam animi audax suspendo succurro cum tantillus.",
+      "type": "highlight",
+      "start_time": 80.2,
+      "end_time": 91.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "2w9no5PDWSNL5NoAMuvi5m",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=2w9no5PDWSNL5NoAMuvi5m",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        }
+      ],
+      "text": "We redraw the schematic from scratch when the tool chain changes, every single time. Tum defungo acquiro arbustum uter sol demergo aptus.",
+      "type": "highlight",
+      "start_time": 262.2,
+      "end_time": 296.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "zfX64OYBuCLQAv2O8URWrb",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=zfX64OYBuCLQAv2O8URWrb",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "5ifwKemiu4h2RG8TuGjMxe",
+          "title": "Feedback mechanism missing"
+        }
+      ],
+      "text": "virtus sui armarium aestas accusator animadverto trado.",
+      "type": "highlight",
+      "start_time": 408.2,
+      "end_time": 432.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "n6bfysdOz8HYOQMEQHgBTO",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=n6bfysdOz8HYOQMEQHgBTO",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        },
+        {
+          "id": "gFsmdnuNPB5YMwxk0Y6R2C",
+          "title": "Rework required"
+        }
+      ],
+      "text": "I searched for the thermal derating curve and gave up after ten minutes. Administratio repellendus virtus sui armarium aestas accusator animadverto trado.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "uHm5J1R147q9kCteqC8gWh",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=uHm5J1R147q9kCteqC8gWh",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [],
+      "text": "usually  start from a part I",
+      "type": "highlight",
+      "start_time": 52.2,
+      "end_time": 57.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "PaMF3CfvcKMrd1nwBagWkj",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=PaMF3CfvcKMrd1nwBagWkj",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [],
+      "text": "What I want is a reference design that I can actually simulate, not a PDF. Teneo sono aurum.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "TJcVJHRpFg3I2AYDesFB7F",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=TJcVJHRpFg3I2AYDesFB7F",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "u9UI010anUzxbzps6H4c4E",
+          "title": "Power tool request"
+        },
+        {
+          "id": "HuUU1f2eXPCMmsg81D1qFm",
+          "title": "Site findability positive"
+        }
+      ],
+      "text": "I tried  the online search three times and then just opened a distributor",
+      "type": "highlight",
+      "start_time": 894.2,
+      "end_time": 1029.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "XWMMntzBpTzUETEj0afpAv",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=XWMMntzBpTzUETEj0afpAv",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "ROb3gcXmqEbtj3wcFzPzZ5",
+          "title": "Delight"
+        },
+        {
+          "id": "6jXQQXxRxId3aSkoYYnmds",
+          "title": "Skepticism"
+        }
+      ],
+      "text": "We moved to the competitor because their models were already in our simulator.",
+      "type": "highlight",
+      "start_time": 161.2,
+      "end_time": 180.5,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "mMT31OVXqfgSy8EyfGJP9g",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=mMT31OVXqfgSy8EyfGJP9g",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [
+        {
+          "id": "5f8BHna5xiPlEfOvaeBXb6",
+          "title": "Search gave up"
+        }
+      ],
+      "text": "until I need the one parameter",
+      "type": "highlight",
+      "start_time": 120.2,
+      "end_time": 273.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "b0wm5GmkF3naDRLdmEqrJK",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=b0wm5GmkF3naDRLdmEqrJK",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "gFsmdnuNPB5YMwxk0Y6R2C",
+          "title": "Rework required"
+        },
+        {
+          "id": "5ifwKemiu4h2RG8TuGjMxe",
+          "title": "Feedback mechanism missing"
+        }
+      ],
+      "text": "I usually start from a part I already know and only then look at the catalogue. Damno videlicet adiuvo quis vero pecto sursum aegrotatio vae.",
+      "type": "highlight",
+      "start_time": 619.2,
+      "end_time": 635.5,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "vnjf6uJUVsMWCJUrdycVfX",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=vnjf6uJUVsMWCJUrdycVfX",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        }
+      ],
+      "text": "We redraw the schematic from scratch when the tool chain changes, every single time. Circumvenio animi comitatus veritatis cotidie repellat vesco ustilo aurum. Support was excellent, the engineer joined our call and fixed the footprint on the spot.\nThanks, that is really helpful. Anything else you would add?",
+      "type": "highlight",
+      "start_time": 989.2,
+      "end_time": 1001.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "B2FDamOqdBrHYzRoquFpi3",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=B2FDamOqdBrHYzRoquFpi3",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "oQeEXBnGbtxv5cJzjnbuBj",
+          "title": "Trust"
+        }
+      ],
+      "text": "I tried the online search three times and then just opened a distributor site instead. Iusto cunctatio cogito demonstro beneficium vobis varietas comburo. The evaluation board saved us, the simulator did not.",
+      "type": "highlight",
+      "start_time": 894.2,
+      "end_time": 1029.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "mInGYwkTLdydb8cO6gZaN7",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=mInGYwkTLdydb8cO6gZaN7",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [],
+      "text": "answers in a day I stay",
+      "type": "highlight",
+      "start_time": 433.2,
+      "end_time": 444.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "NuF0lgFIGhOa5HhPp77YZd",
+      "url": "https://example.invalid/data/xBxwrNrCFESjeayK8PuiuH#:v:h=NuF0lgFIGhOa5HhPp77YZd",
+      "note_id": "xBxwrNrCFESjeayK8PuiuH",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        },
+        {
+          "id": "5ifwKemiu4h2RG8TuGjMxe",
+          "title": "Feedback mechanism missing"
+        }
+      ],
+      "text": "Most of my day is finding the right part number, not designing. Vitiosus ait solio vereor bene absens.\nWhat happens after you have the requirements?",
+      "type": "highlight",
+      "start_time": 73.2,
+      "end_time": 94.5,
+      "created_at": "2025-11-20T08:12:02.951+00:00",
+      "updated_at": "2025-11-20T08:12:02.951+00:00"
+    },
+    {
+      "id": "rLW8W4mXAyShRvkQa2IHUF",
+      "url": "https://example.invalid/data/SJohR2Uc0DFfPWsbCdLdaK#:v:h=rLW8W4mXAyShRvkQa2IHUF",
+      "note_id": "SJohR2Uc0DFfPWsbCdLdaK",
+      "tags": [],
+      "text": "us, teh simulator did not.",
+      "type": "highlight",
+      "start_time": 881.2,
+      "end_time": 905.5,
+      "created_at": "2025-11-28T18:52:31.978+00:00",
+      "updated_at": "2025-11-28T18:52:31.978+00:00"
+    },
+    {
+      "id": "qV0n0frBhU27QnRcH24mKL",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=qV0n0frBhU27QnRcH24mKL",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "K8fhmpNGk8LdlCV4VWZcYS",
+          "title": "AI future potential"
+        }
+      ],
+      "text": "assistant for numbers, I use it to draft emails. Arma toties tredecim vulgivagus. The",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "uvXQoAjQoJ49iBXBYoYBB2",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=uvXQoAjQoJ49iBXBYoYBB2",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "oQeEXBnGbtxv5cJzjnbuBj",
+          "title": "Trust"
+        }
+      ],
+      "text": "The data sheet is great",
+      "type": "highlight",
+      "start_time": 434.2,
+      "end_time": 453.5,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "26kwCvbpt6JY7j1Z38EfOB",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=26kwCvbpt6JY7j1Z38EfOB",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [],
+      "text": "We moved to the competitor because their models were already in our simulator. Comparo textor quis deputo.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    },
+    {
+      "id": "TCMImE7UQoyR7TqbQrSDuI",
+      "url": "https://example.invalid/data/eW9O3ukw6lgccKea10JCVl#:v:h=TCMImE7UQoyR7TqbQrSDuI",
+      "note_id": "eW9O3ukw6lgccKea10JCVl",
+      "tags": [
+        {
+          "id": "y2t0RHnxkpv7xcW5jo1u6W",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        },
+        {
+          "id": "AY2HjKKrUZiFiUxFNfFIC7",
+          "title": "Selection friction"
+        }
+      ],
+      "text": "is finding teh right part number, not designing. Selecting the amplifier took",
+      "type": "highlight",
+      "start_time": 306.2,
+      "end_time": 323.5,
+      "created_at": "2025-12-10T18:03:14.034+00:00",
+      "updated_at": "2025-12-10T18:03:14.034+00:00"
+    }
+  ]
+}

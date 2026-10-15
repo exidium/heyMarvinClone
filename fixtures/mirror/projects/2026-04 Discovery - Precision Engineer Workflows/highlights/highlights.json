@@ -1,0 +1,535 @@
+{
+  "project_id": "E39UkOBqmbgDcYRLgv0LjO",
+  "count": 28,
+  "highlights": [
+    {
+      "id": "NktVA0Veoc3pKynuZvRIS5",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=NktVA0Veoc3pKynuZvRIS5",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "OUINWzP7U3BEC3A6n5Sx40",
+          "title": "RF tool request"
+        },
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "s2CAJUztCvGYDNuUzHpyJ2",
+          "title": "Workflow described"
+        }
+      ],
+      "text": "If the FAE answers in a day I stay with the vendor, if it takes a week I move on. Adfero conscendo patruus.",
+      "type": "highlight",
+      "start_time": 119.2,
+      "end_time": 127.5,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "8mbDIrTuNQ97QHffAFBaMs",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=8mbDIrTuNQ97QHffAFBaMs",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [
+        {
+          "id": "TlfNtNcM5TQqTZwTHS4oGE",
+          "title": "Excel as primary tool"
+        },
+        {
+          "id": "sKIRnqAi5YC0T0rkpCB3EM",
+          "title": "Data sheet friction"
+        }
+      ],
+      "text": "We keep a spreadsheet with every component we ever qualified, that is the real library.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "gmYsWaK6obdVJYjSyMHG7l",
+      "url": "https://example.invalid/data/n3mPuV0WsIxp8g9unxEa4M#:v:h=gmYsWaK6obdVJYjSyMHG7l",
+      "note_id": "n3mPuV0WsIxp8g9unxEa4M",
+      "tags": [
+        {
+          "id": "OUINWzP7U3BEC3A6n5Sx40",
+          "title": "RF tool request"
+        },
+        {
+          "id": "l19EaLbeJfNBrfDiob2Xel",
+          "title": "Tool friction"
+        }
+      ],
+      "text": "What I want is a reference design that",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-28T11:26:47.623+00:00",
+      "updated_at": "2026-07-28T11:26:47.623+00:00"
+    },
+    {
+      "id": "lbaG3rQGQqCroY0pjsOHh2",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=lbaG3rQGQqCroY0pjsOHh2",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [],
+      "text": "Honestly I do not trust the AI assistant for numbers, I use it to draft emails. Damno vesper velit. I would pay for a tool that keeps the parameters in sync between selection and layout.",
+      "type": "highlight",
+      "start_time": 3137.2,
+      "end_time": 3183.5,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "5rxKKZ7ZcNNsRnAcn8OfZQ",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=5rxKKZ7ZcNNsRnAcn8OfZQ",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [
+        {
+          "id": "wE4z4zd5ATqkpnu1zg0V6W",
+          "title": "Rework required"
+        },
+        {
+          "id": "OUINWzP7U3BEC3A6n5Sx40",
+          "title": "RF tool request"
+        }
+      ],
+      "text": "The data sheet is great until I need the one parameter that is missing from the table. Timidus tricesimus deorsum voluptatum deporto cauda.",
+      "type": "highlight",
+      "start_time": 1212.2,
+      "end_time": 1246.5,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "w5auBFMRyegRWTK2gr8MGm",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=w5auBFMRyegRWTK2gr8MGm",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        },
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        },
+        {
+          "id": "U5BzOBeos2KiPVhymKN0Zp",
+          "title": "Workflow ad hoc"
+        }
+      ],
+      "text": "do not trust teh AI assistant for numbers, I use",
+      "type": "highlight",
+      "start_time": 628.2,
+      "end_time": 652.5,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "DnbJ5NnSlNqYXmF7N2MFF4",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=DnbJ5NnSlNqYXmF7N2MFF4",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        },
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        }
+      ],
+      "text": "If the FAE answers in a day I stay with the vendor, if it takes a week I move on. Adfero conscendo patruus.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "x5VJd4uSWcfYnDbIVsNbm8",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=x5VJd4uSWcfYnDbIVsNbm8",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [],
+      "text": "know and only then look at the",
+      "type": "highlight",
+      "start_time": 927.2,
+      "end_time": 969.5,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "eUEuYGrFbRBUi4sDMmpePA",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=eUEuYGrFbRBUi4sDMmpePA",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [
+        {
+          "id": "KM7BqDy89Myh82esF9d7eq",
+          "title": "Workflow described"
+        },
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        },
+        {
+          "id": "syBX7XmJkBgJa1XhIKpGdU",
+          "title": "Workflow ad hoc"
+        }
+      ],
+      "text": "in sync between selection and layout.",
+      "type": "highlight",
+      "start_time": 192.2,
+      "end_time": 287.5,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "mxUaUAQHiCA529vqcCsb7x",
+      "url": "https://example.invalid/data/n3mPuV0WsIxp8g9unxEa4M#:v:h=mxUaUAQHiCA529vqcCsb7x",
+      "note_id": "n3mPuV0WsIxp8g9unxEa4M",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        },
+        {
+          "id": "nfgrRQRyr9GjeoAITEkiof",
+          "title": "Internal library first"
+        }
+      ],
+      "text": "Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. Amaritudo collum voluptas abbas caritas tonsor speciosus blandior.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-28T11:26:47.623+00:00",
+      "updated_at": "2026-07-28T11:26:47.623+00:00"
+    },
+    {
+      "id": "83TCxr3L5GyTPMTCOQnz3O",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=83TCxr3L5GyTPMTCOQnz3O",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [
+        {
+          "id": "OUINWzP7U3BEC3A6n5Sx40",
+          "title": "RF tool request"
+        },
+        {
+          "id": "TlfNtNcM5TQqTZwTHS4oGE",
+          "title": "Excel as primary tool"
+        }
+      ],
+      "text": "Support was excellent, the engineer joined our call and fixed the footprint on the spot.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "drqtUUz6YEbmK3ZYlu6KBZ",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=drqtUUz6YEbmK3ZYlu6KBZ",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [],
+      "text": "it after the first review. A tamen perferendis corrupti articulus tondeo.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "UIrBmOtvIWJh2w3Ga1xn8E",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=UIrBmOtvIWJh2w3Ga1xn8E",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        }
+      ],
+      "text": "The block diagram lives in a slide deck and nobody updates it after the first review. Cubitum canis supra reprehenderit victus denuo delectatio tergum aperte.\nHow do you compare parts across vendors?",
+      "type": "highlight",
+      "start_time": 207.2,
+      "end_time": 244.5,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "oSesCLpfAak3IvqBdi9ROD",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=oSesCLpfAak3IvqBdi9ROD",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [],
+      "text": "Selecting the amplifier took two days because I could not compare noise figures across vendors. Celer acquiro agnitio curiositas ara demum conscendo solus patrocinor bibo. The evaluation board saved us, the simulator did not.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "Lel0qSQtEdxn7FF3uGtWVl",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=Lel0qSQtEdxn7FF3uGtWVl",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [],
+      "text": "data sheet is great until I need the one parameter that is missing",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "S13sRmTvVWNfaKuYPqPa3h",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=S13sRmTvVWNfaKuYPqPa3h",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        },
+        {
+          "id": "l19EaLbeJfNBrfDiob2Xel",
+          "title": "Tool friction"
+        }
+      ],
+      "text": "The block diagram lives in a slide",
+      "type": "highlight",
+      "start_time": 53.2,
+      "end_time": 63.5,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "l04Ms5wUyytOZOrgk3iSpW",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=l04Ms5wUyytOZOrgk3iSpW",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        }
+      ],
+      "text": "The data sheet is great until I need the one parameter that is missing from the table. Timidus tricesimus deorsum voluptatum deporto cauda.",
+      "type": "highlight",
+      "start_time": 1212.2,
+      "end_time": 1246.5,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "mhSCtXmtBkfY9Wsylir9eY",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=mhSCtXmtBkfY9Wsylir9eY",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "sKIRnqAi5YC0T0rkpCB3EM",
+          "title": "Data sheet friction"
+        }
+      ],
+      "text": "I tried the online search three times and then just opened a distributor site instead.\nWhat happens after you have the requirements?",
+      "type": "highlight",
+      "start_time": 56.2,
+      "end_time": 73.5,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "L6rFUb7YtWrhBGp62N9sBJ",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=L6rFUb7YtWrhBGp62N9sBJ",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [],
+      "text": "Simulation is where it breaks down, I end up hand-transcribing values into my own workbook. Annus accommodo temeritas tabesco derelinquo depono.",
+      "type": "highlight",
+      "start_time": 1134.2,
+      "end_time": 1148.5,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "gnHEQMFKUVex17YCAdrtC6",
+      "url": "https://example.invalid/data/n3mPuV0WsIxp8g9unxEa4M#:v:h=gnHEQMFKUVex17YCAdrtC6",
+      "note_id": "n3mPuV0WsIxp8g9unxEa4M",
+      "tags": [
+        {
+          "id": "BxRyWo997LyqaNbq9H16f4",
+          "title": "Tool positive"
+        }
+      ],
+      "text": "the tool chain changes, every single",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-28T11:26:47.623+00:00",
+      "updated_at": "2026-07-28T11:26:47.623+00:00"
+    },
+    {
+      "id": "BzDbR8Z8IXvU8QTXyPCQvV",
+      "url": "https://example.invalid/data/0yf9OdKJjL14qqQUZtbhtZ#:v:h=BzDbR8Z8IXvU8QTXyPCQvV",
+      "note_id": "0yf9OdKJjL14qqQUZtbhtZ",
+      "tags": [
+        {
+          "id": "BxRyWo997LyqaNbq9H16f4",
+          "title": "Tool positive"
+        },
+        {
+          "id": "U5BzOBeos2KiPVhymKN0Zp",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "5ifwKemiu4h2RG8TuGjMxe",
+          "title": "Feedback mechanism missing"
+        }
+      ],
+      "text": "I would pay for a tool that keeps the parameters in sync between selection and layout. Canis arbustum sumo attero torrens. The evaluation board saved us, the simulator did not.",
+      "type": "highlight",
+      "start_time": 1868.2,
+      "end_time": 2050.5,
+      "created_at": "2026-06-30T14:06:45.685+00:00",
+      "updated_at": "2026-06-30T14:06:45.685+00:00"
+    },
+    {
+      "id": "T4viKydMwURZxhFDhcBSU0",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=T4viKydMwURZxhFDhcBSU0",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "TlfNtNcM5TQqTZwTHS4oGE",
+          "title": "Excel as primary tool"
+        },
+        {
+          "id": "l19EaLbeJfNBrfDiob2Xel",
+          "title": "Tool friction"
+        },
+        {
+          "id": "JPAaDJgTr2AAXV4xtGnOUb",
+          "title": "RF specific pain"
+        }
+      ],
+      "text": "The data sheet is great until I need the one parameter that is missing from the table.",
+      "type": "highlight",
+      "start_time": 512.2,
+      "end_time": 524.5,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "VBYumOPfx1d2SeBfxa9R5j",
+      "url": "https://example.invalid/data/n3mPuV0WsIxp8g9unxEa4M#:v:h=VBYumOPfx1d2SeBfxa9R5j",
+      "note_id": "n3mPuV0WsIxp8g9unxEa4M",
+      "tags": [],
+      "text": "vulticulus atrox accendo surgo acsi thymum arcus. The power tree calculator gives me a",
+      "type": "highlight",
+      "start_time": 260.2,
+      "end_time": 281.5,
+      "created_at": "2026-07-28T11:26:47.623+00:00",
+      "updated_at": "2026-07-28T11:26:47.623+00:00"
+    },
+    {
+      "id": "lDG985NIyDumbsfGlhC5uX",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=lDG985NIyDumbsfGlhC5uX",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [
+        {
+          "id": "syBX7XmJkBgJa1XhIKpGdU",
+          "title": "Workflow ad hoc"
+        }
+      ],
+      "text": "Support was excellent, the engineer joined our call and fixed the footprint on the spot.",
+      "type": "highlight",
+      "start_time": 222.2,
+      "end_time": 244.5,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "XcgYgObRs2YIq2dGxvXa9J",
+      "url": "https://example.invalid/data/vK0TuIa1XqWFjsZcb1RaUc#:v:h=XcgYgObRs2YIq2dGxvXa9J",
+      "note_id": "vK0TuIa1XqWFjsZcb1RaUc",
+      "tags": [
+        {
+          "id": "wE4z4zd5ATqkpnu1zg0V6W",
+          "title": "Rework required"
+        },
+        {
+          "id": "K8fhmpNGk8LdlCV4VWZcYS",
+          "title": "AI future potential"
+        },
+        {
+          "id": "sKIRnqAi5YC0T0rkpCB3EM",
+          "title": "Data sheet friction"
+        }
+      ],
+      "text": "We keep a spreadsheet with every component we ever qualified, that is the real library.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-07-29T12:01:15.276+00:00",
+      "updated_at": "2026-07-29T12:01:15.276+00:00"
+    },
+    {
+      "id": "lSSMbUlerAqlMVvJwfpkRi",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=lSSMbUlerAqlMVvJwfpkRi",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        }
+      ],
+      "text": "do not trust the AI assistant for numbers,",
+      "type": "highlight",
+      "start_time": 541.2,
+      "end_time": 577.5,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "Q1QJIgaJKewUpfGt5vVTIP",
+      "url": "https://example.invalid/data/WcNabhe9Chr50XWDNhmvuJ#:v:h=Q1QJIgaJKewUpfGt5vVTIP",
+      "note_id": "WcNabhe9Chr50XWDNhmvuJ",
+      "tags": [
+        {
+          "id": "nfgrRQRyr9GjeoAITEkiof",
+          "title": "Internal library first"
+        },
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        },
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        }
+      ],
+      "text": "I searched for the thermal derating curve and gave up after ten minutes. Accommodo basium vos dens strues timor eum a tersus artificiose. I usually start from a part I already know and only then look at the catalogue.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-08-14T08:12:30.216+00:00",
+      "updated_at": "2026-08-14T08:12:30.216+00:00"
+    },
+    {
+      "id": "y0PKs7CUfwVpnLSleuwfNe",
+      "url": "https://example.invalid/data/n3mPuV0WsIxp8g9unxEa4M#:v:h=y0PKs7CUfwVpnLSleuwfNe",
+      "note_id": "n3mPuV0WsIxp8g9unxEa4M",
+      "tags": [
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        },
+        {
+          "id": "U5BzOBeos2KiPVhymKN0Zp",
+          "title": "Workflow ad hoc"
+        }
+      ],
+      "text": "reference design that  I can actually simulate, not a PDF. Calamitas commodi convoco apostolus",
+      "type": "highlight",
+      "start_time": 471.2,
+      "end_time": 480.5,
+      "created_at": "2026-07-28T11:26:47.623+00:00",
+      "updated_at": "2026-07-28T11:26:47.623+00:00"
+    }
+  ]
+}

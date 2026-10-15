@@ -1,0 +1,68 @@
+{
+  "project_id": "E39UkOBqmbgDcYRLgv0LjO",
+  "count": 5,
+  "participants": [
+    {
+      "name": "Cali Walker",
+      "role": "Systems architect",
+      "company": "Lueilwitz, Rosenbaum and Mayert",
+      "segment": "Mid-market",
+      "tools_used": [
+        "SpiceBench",
+        "Datasheet Finder",
+        "RFCascade",
+        "Excel"
+      ],
+      "notes": "Adulatio vicinus paens barba crebro."
+    },
+    {
+      "name": "Griffin Cremin",
+      "role": "Systems architect",
+      "company": "Gulgowski - Lakin",
+      "segment": "Mid-market",
+      "tools_used": [
+        "KiCad",
+        "Excel",
+        "SignalForge"
+      ],
+      "notes": "Conventus balbus studio vir."
+    },
+    {
+      "name": "Scott Orn",
+      "role": "Student",
+      "company": "Waelchi, Schuster and Pagac",
+      "segment": "Enterprise",
+      "tools_used": [
+        "Datasheet Finder",
+        "MATLAB",
+        "RFCascade",
+        "SignalForge"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Paxton Moen",
+      "role": "Student",
+      "company": "Senger and Sons",
+      "segment": "Academic",
+      "tools_used": [
+        "LTspice-like sim",
+        "PowerPlanner"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Tara Heathcote",
+      "role": "FAE",
+      "company": "Borer - Stracke",
+      "segment": "Academic",
+      "tools_used": [
+        "SpiceBench",
+        "LTspice-like sim",
+        "SignalForge",
+        "RFCascade"
+      ],
+      "notes": ""
+    }
+  ]
+}

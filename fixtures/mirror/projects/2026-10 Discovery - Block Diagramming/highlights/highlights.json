@@ -1,0 +1,613 @@
+{
+  "project_id": "m5wwMhmHPhSXSIk4HlHGSU",
+  "count": 32,
+  "highlights": [
+    {
+      "id": "Sb2oapfLkEB8eDFZccIFeG",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=Sb2oapfLkEB8eDFZccIFeG",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [],
+      "text": "and gave up after ten minutes.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "VcwTf5xixxNp7F3wJ5GVwo",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=VcwTf5xixxNp7F3wJ5GVwo",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "KA06Rg9UQ9qH9oKCdR9GnD",
+          "title": "Rework required"
+        },
+        {
+          "id": "syBX7XmJkBgJa1XhIKpGdU",
+          "title": "Workflow ad hoc"
+        },
+        {
+          "id": "6jXQQXxRxId3aSkoYYnmds",
+          "title": "Skepticism"
+        }
+      ],
+      "text": "only then look at teh catalogue.",
+      "type": "highlight",
+      "start_time": 651.2,
+      "end_time": 670.5,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "FHep8wJptxBUUrNfYDIUZa",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=FHep8wJptxBUUrNfYDIUZa",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. The power tree calculator gives me a number but I cannot see the assumptions behind it.\nThanks, that is really helpful. Anything else you would add?",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "AUvE515IOik9vgokCwmOAE",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=AUvE515IOik9vgokCwmOAE",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [
+        {
+          "id": "lw3RdAPi5KiZ1onYPz24Tq",
+          "title": "AI skepticism"
+        },
+        {
+          "id": "2EJpIgu5kKsCnAmBtK0yWy",
+          "title": "Data sheet friction"
+        }
+      ],
+      "text": "The evaluation board saved us, the simulator did not.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "4TlpyAtY8XIRzJRZpJyIH8",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=4TlpyAtY8XIRzJRZpJyIH8",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        },
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        },
+        {
+          "id": "K8fhmpNGk8LdlCV4VWZcYS",
+          "title": "AI future potential"
+        }
+      ],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. The power tree calculator gives me a number but I cannot see the assumptions behind it.",
+      "type": "highlight",
+      "start_time": 466.2,
+      "end_time": 496.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "uxPeZvppJlx40t3lQFnXIc",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=uxPeZvppJlx40t3lQFnXIc",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        },
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "2EJpIgu5kKsCnAmBtK0yWy",
+          "title": "Data sheet friction"
+        }
+      ],
+      "text": "I tried the online search three times and then just opened a distributor site instead. Defleo absque iure.\nThanks, that is really helpful. Anything else you would add?",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "9wq7xl8RVunfbiMUMkqYgA",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=9wq7xl8RVunfbiMUMkqYgA",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        },
+        {
+          "id": "nfgrRQRyr9GjeoAITEkiof",
+          "title": "Internal library first"
+        }
+      ],
+      "text": "If the FAE answers in a day I stay with the vendor, if it takes a week I move on. We keep a spreadsheet with every component we ever qualified, that is the real library.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "5kxfI6d1YXxv2QnA44WLUi",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=5kxfI6d1YXxv2QnA44WLUi",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "ROb3gcXmqEbtj3wcFzPzZ5",
+          "title": "Delight"
+        },
+        {
+          "id": "R9nrzxoAbyXiGgMyDXwQ6B",
+          "title": "Block Diagramming tool request"
+        }
+      ],
+      "text": "deck and nobody updates it after the",
+      "type": "highlight",
+      "start_time": 408.2,
+      "end_time": 428.5,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "QAQNGuJlYY8j7gYTSJ8bEQ",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=QAQNGuJlYY8j7gYTSJ8bEQ",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [
+        {
+          "id": "2EJpIgu5kKsCnAmBtK0yWy",
+          "title": "Data sheet friction"
+        },
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        }
+      ],
+      "text": "What I want is a reference design that I can actually simulate, not a PDF. Bibo cetera dignissimos creptio fugit uredo adfero terga doloribus.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "ltLIUfBRvNRiuijtpni6RS",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=ltLIUfBRvNRiuijtpni6RS",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "nfgrRQRyr9GjeoAITEkiof",
+          "title": "Internal library first"
+        },
+        {
+          "id": "6jXQQXxRxId3aSkoYYnmds",
+          "title": "Skepticism"
+        }
+      ],
+      "text": "joined our call and fixed the footprint",
+      "type": "highlight",
+      "start_time": 504.2,
+      "end_time": 548.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "sW3PesKCR6HHo5bqFXFmKb",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=sW3PesKCR6HHo5bqFXFmKb",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. Vespillo similique comedo fuga creber laudantium textor tibi vigor statua.",
+      "type": "highlight",
+      "start_time": 663.2,
+      "end_time": 690.5,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "6RBZFE1BMJJ9Ta3u3VHgsk",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=6RBZFE1BMJJ9Ta3u3VHgsk",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [],
+      "text": "teh online search three times and",
+      "type": "highlight",
+      "start_time": 862.2,
+      "end_time": 886.5,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "HmHfKpm2zZJccU6brdAljE",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=HmHfKpm2zZJccU6brdAljE",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [
+        {
+          "id": "R9nrzxoAbyXiGgMyDXwQ6B",
+          "title": "Block Diagramming tool request"
+        },
+        {
+          "id": "6jx1SoZ2vuPQzzvQO8BbCT",
+          "title": "Workflow described"
+        }
+      ],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. Nobis commemoro theca consequatur quisquam demens pecco quis velum.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "Sb6zAdqrXg6bO9nLjCTWA4",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=Sb6zAdqrXg6bO9nLjCTWA4",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [],
+      "text": "tool that keeps the parameters in sync between",
+      "type": "highlight",
+      "start_time": 236.2,
+      "end_time": 241.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "4zClI14xXD9s8iaO4efFzi",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=4zClI14xXD9s8iaO4efFzi",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        }
+      ],
+      "text": "The data sheet is great until I need the one parameter that is missing from the table.",
+      "type": "highlight",
+      "start_time": 345.2,
+      "end_time": 353.5,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "q1KHpv2sLgNtGZfTeV4yAU",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=q1KHpv2sLgNtGZfTeV4yAU",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [],
+      "text": "If the FAE answers in a day I stay with the vendor, if it takes a week I move on. Dicta somnus attero quas verto subnecto vergo tepidus tamen adeptio.",
+      "type": "highlight",
+      "start_time": 1726.2,
+      "end_time": 1924.5,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "CNOlgSfb39HUe0z76khUJ3",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=CNOlgSfb39HUe0z76khUJ3",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [
+        {
+          "id": "2EJpIgu5kKsCnAmBtK0yWy",
+          "title": "Data sheet friction"
+        },
+        {
+          "id": "nfgrRQRyr9GjeoAITEkiof",
+          "title": "Internal library first"
+        }
+      ],
+      "text": "minutes. Decet ait concedo ratione deprecator alo vilitas talio.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "6fD9Bg7LgQvt2jRQ4kT2n4",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=6fD9Bg7LgQvt2jRQ4kT2n4",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "lw3RdAPi5KiZ1onYPz24Tq",
+          "title": "AI skepticism"
+        },
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "14qB9Bxh9VatqRBZdEqPs8",
+          "title": "Data sheet positive"
+        }
+      ],
+      "text": "Most of my day is finding the right part number, not designing. Tibi crustulum auxilium ventito vix.\nHow do you compare parts across vendors?",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "yRvHmlSLpnsunjEpX2I90S",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=yRvHmlSLpnsunjEpX2I90S",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "8CvYwfwcKbNM6bLkNRMxe3",
+          "title": "Multi-tool handoff"
+        },
+        {
+          "id": "R9nrzxoAbyXiGgMyDXwQ6B",
+          "title": "Block Diagramming tool request"
+        }
+      ],
+      "text": "start from a part I already know and only then look at",
+      "type": "highlight",
+      "start_time": 651.2,
+      "end_time": 670.5,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "zC4AjdAnKa8UqOhydrXxLV",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=zC4AjdAnKa8UqOhydrXxLV",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "0ANMbus6dGHQVPM81KInmG",
+          "title": "Site findability positive"
+        },
+        {
+          "id": "ROb3gcXmqEbtj3wcFzPzZ5",
+          "title": "Delight"
+        },
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        }
+      ],
+      "text": "so onboarding juniors is painful. The block diagram lives in a slide",
+      "type": "highlight",
+      "start_time": 303.2,
+      "end_time": 338.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "591fokRIYOFNlvFSK6rgfA",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=591fokRIYOFNlvFSK6rgfA",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "R9nrzxoAbyXiGgMyDXwQ6B",
+          "title": "Block Diagramming tool request"
+        }
+      ],
+      "text": "The power tree calculator gives me a number but",
+      "type": "highlight",
+      "start_time": 466.2,
+      "end_time": 496.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "NDvNKgruQgenJ8a3zYTRHu",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=NDvNKgruQgenJ8a3zYTRHu",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [
+        {
+          "id": "2EJpIgu5kKsCnAmBtK0yWy",
+          "title": "Data sheet friction"
+        },
+        {
+          "id": "14qB9Bxh9VatqRBZdEqPs8",
+          "title": "Data sheet positive"
+        },
+        {
+          "id": "KA06Rg9UQ9qH9oKCdR9GnD",
+          "title": "Rework required"
+        }
+      ],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. Aeger sponte temptatio teneo aptus synagoga ceno tracto. We moved to the competitor because their models were already in our simulator.",
+      "type": "highlight",
+      "start_time": 699.2,
+      "end_time": 707.5,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "iF7CNyScVDcZ9KnDZeQlGX",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=iF7CNyScVDcZ9KnDZeQlGX",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "BxRyWo997LyqaNbq9H16f4",
+          "title": "Tool positive"
+        },
+        {
+          "id": "xDEjalhHxBQnyrq1WOCbXv",
+          "title": "Stage naming mismatch"
+        },
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        }
+      ],
+      "text": "tried the online search three times  and then just  opened  a distributor  site instead.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "IqNFqUQ5Q382he6KqDDYof",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=IqNFqUQ5Q382he6KqDDYof",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        }
+      ],
+      "text": "I tried the online search three times and then just opened a distributor site instead. Bonus addo solus aperiam vestigium atrox.\nThanks, that is really helpful. Anything else you would add?",
+      "type": "highlight",
+      "start_time": 457.2,
+      "end_time": 499.5,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "6nf2awLGj2Aud5X6qYCrND",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=6nf2awLGj2Aud5X6qYCrND",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. Aeger sponte temptatio teneo aptus synagoga ceno tracto. We moved to the competitor because their models were already in our simulator.",
+      "type": "highlight",
+      "start_time": 699.2,
+      "end_time": 707.5,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "EOgDd3y4EPGXaeAiu4z6Ob",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=EOgDd3y4EPGXaeAiu4z6Ob",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "TKCn12WXTfB8s6XA6wobzd",
+          "title": "Block Diagramming specific pain"
+        },
+        {
+          "id": "KA06Rg9UQ9qH9oKCdR9GnD",
+          "title": "Rework required"
+        },
+        {
+          "id": "BxRyWo997LyqaNbq9H16f4",
+          "title": "Tool positive"
+        }
+      ],
+      "text": "I usually start from a part I already know and only then look at the catalogue.",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    },
+    {
+      "id": "w0s1bgaPnhNCkCkh37OZEy",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=w0s1bgaPnhNCkCkh37OZEy",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [],
+      "text": "dignissimos creptio fugit uredo adfero terga doloribus.",
+      "type": "highlight",
+      "start_time": 390.2,
+      "end_time": 401.5,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "Bkuhknzh9iPEpLFIIUnhA6",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=Bkuhknzh9iPEpLFIIUnhA6",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [
+        {
+          "id": "lw3RdAPi5KiZ1onYPz24Tq",
+          "title": "AI skepticism"
+        },
+        {
+          "id": "BxRyWo997LyqaNbq9H16f4",
+          "title": "Tool positive"
+        }
+      ],
+      "text": "The power tree calculator gives me a number but I cannot see the assumptions behind it. The power tree calculator gives me a number but I cannot see the assumptions behind it.",
+      "type": "highlight",
+      "start_time": 466.2,
+      "end_time": 496.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "ZzGX4T43u3cUlRpKWp2rXC",
+      "url": "https://example.invalid/data/CLGMzTA2ZBV82MMeOK7fRX#:v:h=ZzGX4T43u3cUlRpKWp2rXC",
+      "note_id": "CLGMzTA2ZBV82MMeOK7fRX",
+      "tags": [
+        {
+          "id": "MDRZVaKjxcfo5VyGiSxX6Z",
+          "title": "External tool preferred"
+        }
+      ],
+      "text": "thermal derating curve and gave up after ten minutes. Decet ait concedo",
+      "type": "highlight",
+      "start_time": null,
+      "end_time": null,
+      "created_at": "2026-01-25T12:58:34.625+00:00",
+      "updated_at": "2026-01-25T12:58:34.625+00:00"
+    },
+    {
+      "id": "T6pgSiuHOuct4Hm5jNttSv",
+      "url": "https://example.invalid/data/qLCDjYoQq8kejnHnlabvWo#:v:h=T6pgSiuHOuct4Hm5jNttSv",
+      "note_id": "qLCDjYoQq8kejnHnlabvWo",
+      "tags": [],
+      "text": "The block diagram lives in a slide deck and nobody updates it after the first review. Conqueror vos alii contabesco est spiritus modi.",
+      "type": "highlight",
+      "start_time": 195.2,
+      "end_time": 222.5,
+      "created_at": "2026-01-30T20:44:40.821+00:00",
+      "updated_at": "2026-01-30T20:44:40.821+00:00"
+    },
+    {
+      "id": "d8tfOKiFzl2hlpt1kxvgry",
+      "url": "https://example.invalid/data/KWclJ9gbPZ620g1DT5f8IQ#:v:h=d8tfOKiFzl2hlpt1kxvgry",
+      "note_id": "KWclJ9gbPZ620g1DT5f8IQ",
+      "tags": [
+        {
+          "id": "zeww133eiwExDGyAusqkJa",
+          "title": "FAE as differentiator"
+        },
+        {
+          "id": "GXzj46bWkzz0dIXdrP5V8r",
+          "title": "Support friction"
+        }
+      ],
+      "text": "and then just opened a distributor site",
+      "type": "highlight",
+      "start_time": 193.2,
+      "end_time": 237.5,
+      "created_at": "2026-02-18T00:57:35.836+00:00",
+      "updated_at": "2026-02-18T00:57:35.836+00:00"
+    },
+    {
+      "id": "vGutwZOEc65BEjmk01K3py",
+      "url": "https://example.invalid/data/QnMZVTJvPMKQ3BsW0nPw7K#:v:h=vGutwZOEc65BEjmk01K3py",
+      "note_id": "QnMZVTJvPMKQ3BsW0nPw7K",
+      "tags": [
+        {
+          "id": "KA06Rg9UQ9qH9oKCdR9GnD",
+          "title": "Rework required"
+        }
+      ],
+      "text": "If the FAE answers in a day I stay with the vendor, if it takes a week I move on.",
+      "type": "highlight",
+      "start_time": 575.2,
+      "end_time": 618.5,
+      "created_at": "2026-01-27T17:05:47.723+00:00",
+      "updated_at": "2026-01-27T17:05:47.723+00:00"
+    }
+  ]
+}

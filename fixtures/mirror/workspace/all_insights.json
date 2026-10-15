@@ -1,0 +1,53 @@
+{
+  "count": 6,
+  "insights": [
+    {
+      "id": "HSxoUaQRmntg7A5rXas9Bl",
+      "url": "https://example.invalid/docs/HSxoUaQRmntg7A5rXas9Bl",
+      "title": "Insight: Spreadsheets compensate for missing simulation",
+      "type": "insight",
+      "created_at": "2026-05-15T03:32:06.568+00:00",
+      "folder": null
+    },
+    {
+      "id": "If9Z1hYmvFt9Wm9ug5zH9z",
+      "url": "https://example.invalid/docs/If9Z1hYmvFt9Wm9ug5zH9z",
+      "title": "Insight: Search is abandoned for distributor sites",
+      "type": "insight",
+      "created_at": "2026-06-11T17:00:22.295+00:00",
+      "folder": null
+    },
+    {
+      "id": "qLWObEGonmXjosO2jl0yYr",
+      "url": "https://example.invalid/docs/qLWObEGonmXjosO2jl0yYr",
+      "title": "Insight: Search is abandoned for distributor sites",
+      "type": "insight",
+      "created_at": "2026-06-27T22:10:28.776+00:00",
+      "folder": null
+    },
+    {
+      "id": "pKzWQNpOCSFzZt4ROLrrvD",
+      "url": "https://example.invalid/docs/pKzWQNpOCSFzZt4ROLrrvD",
+      "title": "Insight: Component selection is the most painful stage",
+      "type": "insight",
+      "created_at": "2026-06-15T23:12:20.803+00:00",
+      "folder": null
+    },
+    {
+      "id": "CrKhW37juvsHDRQkScu2Bl",
+      "url": "https://example.invalid/docs/CrKhW37juvsHDRQkScu2Bl",
+      "title": "Insight: Support speed decides vendor loyalty",
+      "type": "insight",
+      "created_at": "2026-01-11T03:32:29.707+00:00",
+      "folder": null
+    },
+    {
+      "id": "pO0TtuJOXJ7hxWqGcYTsJ4",
+      "url": "https://example.invalid/docs/pO0TtuJOXJ7hxWqGcYTsJ4",
+      "title": "Insight: Search is abandoned for distributor sites",
+      "type": "insight",
+      "created_at": "2025-11-17T15:11:08.207+00:00",
+      "folder": null
+    }
+  ]
+}

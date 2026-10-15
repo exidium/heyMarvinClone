@@ -1,0 +1,52 @@
+{
+  "project_id": "8vTYrnTnPywDoP7RtDeA36",
+  "count": 4,
+  "participants": [
+    {
+      "name": "Mia Hills",
+      "role": "RF engineer",
+      "company": "Mohr - Langworth",
+      "segment": "Enterprise",
+      "tools_used": [
+        "LTspice-like sim",
+        "MATLAB"
+      ],
+      "notes": "Comitatus tui solutio minus magnam cum adaugeo adfectus antepono celebrer."
+    },
+    {
+      "name": "Pascale Reichert",
+      "role": "Hardware engineer",
+      "company": "Hoeger LLC",
+      "segment": "Startup",
+      "tools_used": [
+        "LTspice-like sim",
+        "Altium"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Esta Hamill",
+      "role": "RF engineer",
+      "company": "Smitham - Schulist",
+      "segment": "Academic",
+      "tools_used": [
+        "LTspice-like sim",
+        "MATLAB"
+      ],
+      "notes": "Crastinus tersus vomito voluptatem comedo cauda quam clarus timidus capio."
+    },
+    {
+      "name": "Mrs. Alvina Langworth",
+      "role": "Systems architect",
+      "company": "Emard - Little",
+      "segment": "Academic",
+      "tools_used": [
+        "Datasheet Finder",
+        "PowerPlanner",
+        "MATLAB",
+        "RFCascade"
+      ],
+      "notes": ""
+    }
+  ]
+}

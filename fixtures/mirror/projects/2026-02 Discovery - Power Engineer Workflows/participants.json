@@ -1,0 +1,75 @@
+{
+  "project_id": "Huv16OksRgZooqLXONyduz",
+  "count": 6,
+  "participants": [
+    {
+      "name": "Gladyce Aufderhar",
+      "role": "Student",
+      "company": "Mills and Sons",
+      "segment": "Startup",
+      "tools_used": [
+        "Altium",
+        "KiCad",
+        "LTspice-like sim",
+        "RFCascade"
+      ],
+      "notes": "Alii iure virgo textus vel quas decretum tergiversatio sortitus itaque."
+    },
+    {
+      "name": "Merle Schultz",
+      "role": "RF engineer",
+      "company": "Lehner Inc",
+      "segment": "Internal",
+      "tools_used": [
+        "SpiceBench",
+        "MATLAB",
+        "Excel",
+        "KiCad"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Thelma Lang PhD",
+      "role": "Student",
+      "company": "Shanahan - Kiehn",
+      "segment": "Internal",
+      "tools_used": [
+        "SignalForge",
+        "SpiceBench",
+        "LTspice-like sim",
+        "Altium"
+      ],
+      "notes": "Temporibus bellicus urbs."
+    },
+    {
+      "name": "Chesley Lueilwitz I",
+      "role": "Systems architect",
+      "company": "Rogahn - Willms",
+      "segment": "Academic",
+      "tools_used": [
+        "Datasheet Finder"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Marlen Orn",
+      "role": "RF engineer",
+      "company": "Murphy, Roob and Dare",
+      "segment": "Startup",
+      "tools_used": [
+        "MATLAB"
+      ],
+      "notes": "Harum comis tristis capillus vere."
+    },
+    {
+      "name": "Tania Conroy",
+      "role": "FAE",
+      "company": "Hickle, Streich and Tillman",
+      "segment": "Internal",
+      "tools_used": [
+        "KiCad"
+      ],
+      "notes": "Cogito aut caelestis arcesso turpis concido inflammatio voluptas accusator."
+    }
+  ]
+}
