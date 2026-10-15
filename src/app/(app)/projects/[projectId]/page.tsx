@@ -10,14 +10,14 @@ import { EmptyState } from "@/components/shared/EmptyState";
 import { ProjectActions } from "@/components/projects/ProjectActions";
 import { MembersPanel } from "@/components/projects/MembersPanel";
 import { SourceDialog } from "@/components/sources/SourceDialog";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { roleAtLeast } from "@/lib/authz";
 import { formatDate, plural } from "@/lib/format";
 import { getProjectForUser, listProductAreas } from "@/server/queries/projects";
 
 export default async function ProjectPage({ params }: PageProps<"/projects/[projectId]">) {
   const { projectId } = await params;
-  const user = await requireUser();
+  const user = await requirePageUser();
   const [data, productAreas] = await Promise.all([getProjectForUser(user, projectId), listProductAreas()]);
   if (!data) notFound();
   const { project, role, participants, highlightCount } = data;

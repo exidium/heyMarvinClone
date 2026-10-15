@@ -1,0 +1,68 @@
+# Production stack for one Hetzner VM: app + Postgres 17, files on a volume, HTTPS via Caddy (see deploy/Caddyfile).
+# Usage:
+#   cp deploy/.env.prod.example .env.prod && edit it
+#   docker compose -f docker-compose.prod.yml --env-file .env.prod up -d --build
+#   docker compose -f docker-compose.prod.yml --env-file .env.prod run --rm migrate
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: research
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: research
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U research"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://research:${POSTGRES_PASSWORD}@db:5432/research?schema=public
+      UPLOAD_DIR: /data/uploads
+      MAX_TRANSCRIPT_BYTES: ${MAX_TRANSCRIPT_BYTES:-20000000}
+      MAX_RECORDING_BYTES: ${MAX_RECORDING_BYTES:-2000000000}
+      AUTH_DISABLED: "false"
+    volumes:
+      - uploads:/data/uploads   # mount a Hetzner volume here for large recordings
+    ports:
+      - "127.0.0.1:3000:3000"  # Caddy on the host terminates HTTPS and proxies here
+
+  # One-off: apply migrations (and optionally seed). Same image stage with the Prisma CLI.
+  migrate:
+    build:
+      context: .
+      target: build
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://research:${POSTGRES_PASSWORD}@db:5432/research?schema=public
+    command: ["pnpm", "prisma", "migrate", "deploy"]
+
+  backup:
+    image: postgres:17
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - uploads:/data/uploads:ro
+      - ${BACKUP_DIR:-./backups}:/backups
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["pg_dump -h db -U research -Fc research > /backups/db-$(date +%F).dump && tar czf /backups/uploads-$(date +%F).tgz -C /data uploads && find /backups -mtime +14 -delete && ls -la /backups"]
+
+volumes:
+  pgdata:
+  uploads:

@@ -10,7 +10,8 @@ import { randomBytes } from "node:crypto";
  * Files live on server disk under UPLOAD_DIR/sources/<sourceId>/. The database stores paths
  * relative to UPLOAD_DIR so the directory can move (or become a mounted volume) without a migration.
  */
-export const UPLOAD_DIR = path.resolve(process.env.UPLOAD_DIR ?? "./uploads");
+// turbopackIgnore: the directory is runtime configuration, not a build-time asset to trace.
+export const UPLOAD_DIR = path.resolve(/* turbopackIgnore: true */ process.env.UPLOAD_DIR ?? "./uploads");
 
 export class TooLargeError extends Error {
   constructor(public readonly maxBytes: number) {

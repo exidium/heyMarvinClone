@@ -8,7 +8,7 @@ import { SearchFilterBar } from "@/components/search/SearchFilterBar";
 import { SaveViewDialog } from "@/components/search/SaveViewDialog";
 import { DeleteViewButton } from "@/components/search/DeleteViewButton";
 import { Snippet } from "@/components/search/snippet";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { formatDate, plural } from "@/lib/format";
 import { formatClock } from "@/lib/transcript/time";
 import { tagColor } from "@/lib/colors";
@@ -22,7 +22,7 @@ export const metadata = { title: "Search" };
 
 export default async function SearchPage({ searchParams }: PageProps<"/search">) {
   const sp = await searchParams;
-  const user = await requireUser();
+  const user = await requirePageUser();
   const filters = toFilters(await loadSearchFilters(sp));
   const viewId = typeof sp.view === "string" ? sp.view : null;
   const [facets, view] = await Promise.all([searchFacets(user), viewId ? getSavedView(user, viewId) : null]);

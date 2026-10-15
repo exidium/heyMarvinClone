@@ -7,14 +7,14 @@ import { UploadPanel } from "@/components/sources/UploadPanel";
 import { MediaPlayer } from "@/components/transcript/MediaPlayer";
 import { TranscriptEditor } from "@/components/transcript/TranscriptEditor";
 import { listTagsForPicker } from "@/server/queries/tags";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { roleAtLeast } from "@/lib/authz";
 import { formatDate, plural } from "@/lib/format";
 import { getSourceForUser } from "@/server/queries/sources";
 
 export default async function SourcePage({ params }: PageProps<"/projects/[projectId]/sources/[sourceId]">) {
   const { projectId, sourceId } = await params;
-  const user = await requireUser();
+  const user = await requirePageUser();
   const [data, tags] = await Promise.all([getSourceForUser(user, sourceId), listTagsForPicker()]);
   if (!data || data.source.projectId !== projectId) notFound();
   const { source, role } = data;

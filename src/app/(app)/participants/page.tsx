@@ -7,14 +7,14 @@ import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ParticipantDialog } from "@/components/participants/ParticipantDialog";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { listParticipants, participantFacets } from "@/server/queries/participants";
 
 export const metadata = { title: "Participants" };
 
 export default async function ParticipantsPage({ searchParams }: PageProps<"/participants">) {
   const { q } = await searchParams;
-  await requireUser();
+  await requirePageUser();
   const query = typeof q === "string" ? q : "";
   const [rows, facets] = await Promise.all([listParticipants(query), participantFacets()]);
   const newButton = <ParticipantDialog facets={facets} trigger={<Button size="sm"><Plus className="size-4" /> New participant</Button>} />;

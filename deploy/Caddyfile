@@ -1,0 +1,13 @@
+# /etc/caddy/Caddyfile on the Hetzner VM. Caddy obtains and renews the TLS certificate itself.
+research.example.com {
+    encode zstd gzip
+    request_body {
+        max_size 2GB
+    }
+    reverse_proxy 127.0.0.1:3000 {
+        transport http {
+            read_timeout 30m
+            write_timeout 30m
+        }
+    }
+}

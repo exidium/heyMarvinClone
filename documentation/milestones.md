@@ -67,3 +67,15 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - `src/server/queries/search.ts`: two `$queryRaw` queries (highlights, transcript lines) with ranking, `ts_headline` snippets, access clause, project/product-area/date/participant filters, tag ANY/ALL, offset pagination (25 per page).
 - `/search`: filter bar (keyword, scope toggle, project, product area, tags with any/all, role, company, segment, tool, dates, clear), result cards linking to `?highlight=` or `?segment=` on the source page, pagination, save view. `/views/[id]` redirects to the search; the sidebar lists own and shared views; a view can be deleted from its search page.
 - Verified: 8 DB-backed vitest cases over the SQL (keyword, phrase and negation, tag ANY ⊇ ALL, project/area/date/company narrowing, tag filter on lines, viewer never sees the restricted project, pagination) plus 3 Playwright tests (result → highlighted moment selected in the editor; transcript result → segment flashed; filter in URL → saved view → reopened from sidebar → deleted).
+
+## M8 · Deploy preparation (2026-10-15)
+
+- `Dockerfile` (multi-stage, standalone output, non-root), `docker-compose.prod.yml` (app, db, `migrate` and `backup` tool profiles, named volumes for Postgres and uploads), `deploy/Caddyfile`, `deploy/.env.prod.example`, `scripts/backup.sh` for cron, and `documentation/deploy.md` with the one-time setup, release steps, first admin and restore notes.
+- The app shell is `force-dynamic` so a production build never prerenders a database page. `UPLOAD_DIR` resolution carries a `turbopackIgnore` hint so the standalone bundle does not trace the whole project.
+- Verified: `pnpm build` passes with every app route dynamic and no trace warning; `node .next/standalone/server.js` answers `/api/health`, redirects `/projects` to `/login` when signed out, and serves `/login`. Docker itself is verified on the server (not installed locally, D4).
+
+## M9 · Login and users (2026-10-15)
+
+- `src/lib/password.ts` (argon2id via `@node-rs/argon2`), `src/lib/session.ts` (random token in an HttpOnly cookie, SHA-256 stored, 30 days), `src/lib/auth.ts` now resolves the dev seam or the session; `requirePageUser` vs `requireUser` (D35).
+- `/login` (form with `useActionState`, generic error, keeps the email), sign-out in the sidebar, `/users` admin page (create with initial password, toggle admin, set password, delete with project reassignment), `scripts/create-user.ts` for the first admin. Seed gives dev users the password `password12` (override with `DEV_PASSWORD`).
+- Verified: `AUTH_E2E=1` Playwright spec with `AUTH_DISABLED=false`: signed-out redirect, wrong password rejected without clearing the email, editor signs in and out and never sees Users, admin sees Users, anonymous `PUT /api/upload` gets 401. Standalone production server refuses the dev seam in production.

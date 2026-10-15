@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpenText, Bookmark, FolderKanban, Search, Tags, Users } from "lucide-react";
+import { BookOpenText, Bookmark, FolderKanban, Search, Tags, UserCog, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -11,13 +11,13 @@ const nav = [
   { href: "/search", label: "Search", icon: Search },
 ] as const;
 
-const admin = [{ href: "/tags", label: "Tags", icon: Tags }] as const;
+const admin = [{ href: "/tags", label: "Tags", icon: Tags }, { href: "/users", label: "Users", icon: UserCog }] as const;
 
 type NavItem = { href: string; label: string; icon: React.ComponentType<{ className?: string }> };
 
 export type SidebarView = { id: string; name: string; isShared: boolean };
 
-export function AppSidebar({ userLabel = "Local mode", isAdmin = false, views = [] }: { userLabel?: string; isAdmin?: boolean; views?: SidebarView[] }) {
+export function AppSidebar({ userLabel = "Local mode", isAdmin = false, views = [], footer }: { userLabel?: string; isAdmin?: boolean; views?: SidebarView[]; footer?: React.ReactNode }) {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
@@ -63,7 +63,7 @@ export function AppSidebar({ userLabel = "Local mode", isAdmin = false, views = 
           <nav className="flex flex-col gap-0.5">{admin.map(renderLink)}</nav>
         </>
       ) : null}
-      <div className="mt-auto px-2.5 pb-10 text-xs text-muted-foreground">{userLabel}</div>
+      <div className="mt-auto flex flex-col gap-1 px-2.5 pb-10 text-xs text-muted-foreground"><span className="truncate">{userLabel}</span>{footer}</div>
     </aside>
   );
 }

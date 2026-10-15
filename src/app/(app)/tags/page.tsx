@@ -1,12 +1,12 @@
 import { PageHeader } from "@/components/shell/PageHeader";
 import { TagsManager } from "@/components/tags/TagsManager";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { listTagsAdmin } from "@/server/queries/tags";
 
 export const metadata = { title: "Tags" };
 
 export default async function TagsPage() {
-  const user = await requireUser();
+  const user = await requirePageUser();
   const { groups, tags } = await listTagsAdmin();
   return (
     <>

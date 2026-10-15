@@ -1,6 +1,8 @@
 import "server-only";
 import { cache } from "react";
+import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
+import { readSessionUser } from "@/lib/session";
 import type { User } from "@/generated/prisma/client";
 
 /**
@@ -15,6 +17,9 @@ export const DEV_USERS = {
 } as const;
 
 export type DevUserKey = keyof typeof DEV_USERS;
+
+/** True when the dev seam is active (no real sessions, no sign-out). */
+export const isDevAuth = () => process.env.AUTH_DISABLED === "true" && process.env.NODE_ENV !== "production";
 
 export class AuthError extends Error {
   constructor(message = "Not signed in") {
@@ -36,11 +41,17 @@ function devUserEmail(): string | null {
 export const getCurrentUser = cache(async (): Promise<User | null> => {
   const email = devUserEmail();
   if (email) return db.user.findUnique({ where: { email } });
-  // Session-based lookup is added in the auth milestone.
-  return null;
+  return readSessionUser();
 });
 
-/** Returns the current user or throws AuthError. Layouts redirect on it; actions return {ok:false}. */
+/** For pages: the current user, or a redirect to /login. Pages render in parallel with layouts, so each page guards itself. */
+export const requirePageUser = cache(async (): Promise<User> => {
+  const user = await getCurrentUser();
+  if (!user) redirect("/login");
+  return user;
+});
+
+/** For actions and route handlers: the current user or an AuthError (actions turn it into {ok:false}, routes into 401). */
 export const requireUser = cache(async (): Promise<User> => {
   const user = await getCurrentUser();
   if (!user) throw new AuthError();

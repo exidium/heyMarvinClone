@@ -2,6 +2,7 @@ import "dotenv/config";
 import { PrismaClient } from "../src/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { importMirror } from "../src/server/import/dovetail";
+import { hash } from "@node-rs/argon2";
 
 const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL! }) });
 
@@ -16,10 +17,11 @@ async function main() {
   await db.$executeRawUnsafe(`TRUNCATE "HighlightTag", "InsightHighlight", "Insight", "Highlight", "Segment", "SourceParticipant", "Source", "ProjectMember", "Project", "Participant", "Tag", "TagGroup", "SavedView" CASCADE`);
 
   const users: Record<string, { id: string }> = {};
+  const passwordHash = await hash(process.env.DEV_PASSWORD ?? "password12", { memoryCost: 19456, timeCost: 2, parallelism: 1 });
   for (const u of DEV_USERS) {
-    users[u.email] = await db.user.upsert({ where: { email: u.email }, update: { name: u.name, isAdmin: u.isAdmin }, create: u });
+    users[u.email] = await db.user.upsert({ where: { email: u.email }, update: { name: u.name, isAdmin: u.isAdmin, passwordHash }, create: { ...u, passwordHash } });
   }
-  console.log(`seeded ${DEV_USERS.length} dev users`);
+  console.log(`seeded ${DEV_USERS.length} dev users (password: ${process.env.DEV_PASSWORD ?? "password12"})`);
 
   const mirrorDir = process.env.MIRROR_DIR ?? "fixtures/mirror";
   const stats = await importMirror(db, mirrorDir, { ownerId: users["admin@local"].id, log: (s) => console.log("  " + s) });

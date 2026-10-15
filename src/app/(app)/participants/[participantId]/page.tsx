@@ -4,13 +4,13 @@ import { PageHeader } from "@/components/shell/PageHeader";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ParticipantActions } from "@/components/participants/ParticipantActions";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { formatDate } from "@/lib/format";
 import { getParticipantForUser, participantFacets } from "@/server/queries/participants";
 
 export default async function ParticipantPage({ params }: PageProps<"/participants/[participantId]">) {
   const { participantId } = await params;
-  const user = await requireUser();
+  const user = await requirePageUser();
   const [data, facets] = await Promise.all([getParticipantForUser(user, participantId), participantFacets()]);
   if (!data) notFound();
   const { participant, sources } = data;

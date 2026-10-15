@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { ProjectDialog } from "@/components/projects/ProjectDialog";
 import { ProjectsTable } from "@/components/projects/ProjectsTable";
-import { requireUser } from "@/lib/auth";
+import { requirePageUser } from "@/lib/auth";
 import { countHighlightsByProject, listProductAreas, listProjects } from "@/server/queries/projects";
 
 export const metadata = { title: "Projects" };
 
 export default async function ProjectsPage({ searchParams }: PageProps<"/projects">) {
   const { archived } = await searchParams;
-  const user = await requireUser();
+  const user = await requirePageUser();
   const includeArchived = archived === "1";
   const [projects, productAreas] = await Promise.all([listProjects(user, { includeArchived }), listProductAreas()]);
   const highlights = await countHighlightsByProject(projects.map((p) => p.id));
