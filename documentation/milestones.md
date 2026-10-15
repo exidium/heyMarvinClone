@@ -60,3 +60,10 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - Actions in `src/server/actions/tags.ts`, all `requireAdmin` except `createTag` (editors create tags while highlighting). Query `listTagsAdmin` in `src/server/queries/tags.ts`.
 - Verified: Playwright `tests/e2e/tags.spec.ts`: merging a tag into another keeps every highlight tagged exactly once, removes the source tag, and lowers the tag count by one; rename and archive update the row and the database. Typecheck and lint clean.
 - Note: the dev server briefly served the tags page in a Fast Refresh reload loop right after new server actions were added; it cleared after other pages were visited. Restarting `next dev` after adding a `"use server"` module avoids it.
+
+## M7 · Search and saved views (2026-10-15)
+
+- `src/lib/validation/search.ts` is the one filter shape; `src/lib/search-params.ts` maps it to short URL keys with nuqs (`q`, `scope`, `project`, `area`, `tag`, `tags=any|all`, `role`, `company`, `segment`, `tool`, `from`, `to`, `page`).
+- `src/server/queries/search.ts`: two `$queryRaw` queries (highlights, transcript lines) with ranking, `ts_headline` snippets, access clause, project/product-area/date/participant filters, tag ANY/ALL, offset pagination (25 per page).
+- `/search`: filter bar (keyword, scope toggle, project, product area, tags with any/all, role, company, segment, tool, dates, clear), result cards linking to `?highlight=` or `?segment=` on the source page, pagination, save view. `/views/[id]` redirects to the search; the sidebar lists own and shared views; a view can be deleted from its search page.
+- Verified: 8 DB-backed vitest cases over the SQL (keyword, phrase and negation, tag ANY ⊇ ALL, project/area/date/company narrowing, tag filter on lines, viewer never sees the restricted project, pagination) plus 3 Playwright tests (result → highlighted moment selected in the editor; transcript result → segment flashed; filter in URL → saved view → reopened from sidebar → deleted).

@@ -146,6 +146,16 @@ export function TranscriptEditor({ sourceId, segments, highlights: initial, tags
   });
   useEffect(() => () => { for (const t of timers.current.values()) clearTimeout(t); }, []);
 
+  // EditorContent attaches the ProseMirror DOM a tick after the editor exists; DOM effects wait for it.
+  const [domReady, setDomReady] = useState(false);
+  useEffect(() => {
+    if (!editor) return;
+    let frame = 0;
+    const check = () => { if (editor.view.dom.isConnected) setDomReady(true); else frame = requestAnimationFrame(check); };
+    check();
+    return () => cancelAnimationFrame(frame);
+  }, [editor]);
+
   // ---- selected highlight: mark in editor + scroll ----
   useEffect(() => {
     const root = containerRef.current;
@@ -156,7 +166,19 @@ export function TranscriptEditor({ sourceId, segments, highlights: initial, tags
     marks.forEach((m) => (m.dataset.selected = "true"));
     marks[0]?.scrollIntoView({ block: "center", behavior: "smooth" });
     root.querySelector<HTMLElement>(`[data-highlight-item="${selectedId}"]`)?.scrollIntoView({ block: "nearest" });
-  }, [selectedId, highlights, editor]);
+  }, [selectedId, highlights, domReady]);
+
+  // ---- ?segment= deep link from transcript search ----
+  useEffect(() => {
+    const id = search.get("segment");
+    if (!id || !domReady) return;
+    const el = containerRef.current?.querySelector<HTMLElement>(`.segment[data-segment-id="${id}"]`);
+    if (!el) return;
+    el.scrollIntoView({ block: "center" });
+    el.setAttribute("data-active", "true");
+    const t = setTimeout(() => el.removeAttribute("data-active"), 2500);
+    return () => clearTimeout(t);
+  }, [search, domReady]);
 
   // ---- playback: mark the active segment ----
   useEffect(() => {

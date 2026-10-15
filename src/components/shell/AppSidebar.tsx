@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpenText, FolderKanban, Search, Tags, Users } from "lucide-react";
+import { BookOpenText, Bookmark, FolderKanban, Search, Tags, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -15,7 +15,9 @@ const admin = [{ href: "/tags", label: "Tags", icon: Tags }] as const;
 
 type NavItem = { href: string; label: string; icon: React.ComponentType<{ className?: string }> };
 
-export function AppSidebar({ userLabel = "Local mode", isAdmin = false }: { userLabel?: string; isAdmin?: boolean }) {
+export type SidebarView = { id: string; name: string; isShared: boolean };
+
+export function AppSidebar({ userLabel = "Local mode", isAdmin = false, views = [] }: { userLabel?: string; isAdmin?: boolean; views?: SidebarView[] }) {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
 
@@ -49,6 +51,12 @@ export function AppSidebar({ userLabel = "Local mode", isAdmin = false }: { user
         <span className="text-base font-semibold tracking-tight">Research Repo</span>
       </Link>
       <nav className="flex flex-col gap-0.5">{nav.map(renderLink)}</nav>
+      {views.length ? (
+        <>
+          <div className="mt-6 mb-2 px-2.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Saved views</div>
+          <nav className="flex flex-col gap-0.5">{views.map((v) => renderLink({ href: `/views/${v.id}`, label: v.name, icon: Bookmark }))}</nav>
+        </>
+      ) : null}
       {isAdmin ? (
         <>
           <div className="mt-6 mb-2 px-2.5 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">Admin</div>
