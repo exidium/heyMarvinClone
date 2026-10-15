@@ -33,7 +33,7 @@ model User {
   ownedProjects Project[]       @relation("ProjectOwner")
   highlights    Highlight[]     @relation("HighlightCreatedBy")
   savedViews    SavedView[]
-  insights      Insight[]
+  themes        Theme[]
 }
 
 model Session {
@@ -67,7 +67,6 @@ model Project {
   owner    User            @relation("ProjectOwner", fields: [ownerId], references: [id])
   members  ProjectMember[]
   sources  Source[]
-  insights Insight[]
 
   @@index([productArea])
   @@index([startDate])
@@ -168,8 +167,9 @@ model Segment {
   endMs         Int?
   text          String
   version       Int     @default(1) // optimistic lock for per-segment saves
-  /// GENERATED ALWAYS AS to_tsvector('english', text) STORED — see the search_vectors migration
-  search        Unsupported("tsvector")?
+  /// GENERATED ALWAYS AS ... STORED (search_vectors migration). The dbgenerated default mirrors the
+  /// stored expression so `prisma migrate diff` sees no drift (decision D48).
+  search        Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, COALESCE(text, ''::text))"))
 
   source      Source       @relation(fields: [sourceId], references: [id], onDelete: Cascade)
   participant Participant? @relation(fields: [participantId], references: [id], onDelete: SetNull)
@@ -179,6 +179,8 @@ model Segment {
 
   @@unique([sourceId, order])
   @@index([sourceId, startMs])
+  @@index([search], type: Gin)
+  @@index([text(ops: raw("gin_trgm_ops"))], type: Gin, map: "Segment_text_trgm_idx")
 }
 
 // ---------- highlights and tags ----------
@@ -202,21 +204,22 @@ model Highlight {
   externalId     String?         @unique // Dovetail highlight id
   createdAt      DateTime        @default(now())
   updatedAt      DateTime        @updatedAt
-  /// GENERATED ALWAYS AS to_tsvector('english', text || ' ' || note) STORED
-  search         Unsupported("tsvector")?
+  /// GENERATED ALWAYS AS ... STORED (search_vectors migration); see decision D48.
+  search         Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((COALESCE(text, ''::text) || ' '::text) || COALESCE(note, ''::text)))"))
 
   source       Source  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
   startSegment Segment @relation("HighlightStart", fields: [startSegmentId], references: [id], onDelete: Restrict)
   endSegment   Segment @relation("HighlightEnd", fields: [endSegmentId], references: [id], onDelete: Restrict)
   createdBy    User?   @relation("HighlightCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
 
-  tags     HighlightTag[]
-  insights InsightHighlight[]
+  tags   HighlightTag[]
+  themes ThemeHighlight[]
 
   @@index([sourceId])
   @@index([startSegmentId])
   @@index([endSegmentId])
   @@index([createdAt])
+  @@index([search], type: Gin)
 }
 
 model TagGroup {
@@ -270,30 +273,44 @@ model SavedView {
   owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
 }
 
-// ---------- insights (v2: schema only, no UI in v1) ----------
+// ---------- themes: user-made nodes in the explorer tree that collect highlights (the spec's "insights") ----------
 
-model Insight {
-  id          String   @id @default(cuid())
-  projectId   String?
-  statement   String
-  description String?
-  confidence  String?
-  productArea String?
-  createdById String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-
-  project    Project?           @relation(fields: [projectId], references: [id], onDelete: SetNull)
-  createdBy  User?              @relation(fields: [createdById], references: [id], onDelete: SetNull)
-  highlights InsightHighlight[]
+enum Confidence {
+  LOW
+  MEDIUM
+  HIGH
 }
 
-model InsightHighlight {
-  insightId   String
-  highlightId String
+model Theme {
+  id          String      @id @default(cuid())
+  title       String // the finding, stated as a sentence
+  description String?
+  confidence  Confidence?
+  productArea String?
+  parentId    String?
+  position    Int         @default(0)
+  createdById String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
 
-  insight   Insight   @relation(fields: [insightId], references: [id], onDelete: Cascade)
+  parent     Theme?           @relation("ThemeTree", fields: [parentId], references: [id], onDelete: SetNull)
+  children   Theme[]          @relation("ThemeTree")
+  createdBy  User?            @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  highlights ThemeHighlight[]
+
+  @@index([parentId])
+}
+
+model ThemeHighlight {
+  themeId     String
+  highlightId String
+  position    Int      @default(0)
+  addedById   String?
+  createdAt   DateTime @default(now())
+
+  theme     Theme     @relation(fields: [themeId], references: [id], onDelete: Cascade)
   highlight Highlight @relation(fields: [highlightId], references: [id], onDelete: Cascade)
 
-  @@id([insightId, highlightId])
+  @@id([themeId, highlightId])
+  @@index([highlightId])
 }

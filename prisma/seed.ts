@@ -14,7 +14,7 @@ export const DEV_USERS = [
 
 async function main() {
   // Wipe content (not users) so the seed is reproducible.
-  await db.$executeRawUnsafe(`TRUNCATE "HighlightTag", "InsightHighlight", "Insight", "Highlight", "Segment", "SourceParticipant", "Source", "ProjectMember", "Project", "Participant", "Tag", "TagGroup", "SavedView" CASCADE`);
+  await db.$executeRawUnsafe(`TRUNCATE "HighlightTag", "ThemeHighlight", "Theme", "Highlight", "Segment", "SourceParticipant", "Source", "ProjectMember", "Project", "Participant", "Tag", "TagGroup", "SavedView" CASCADE`);
 
   const users: Record<string, { id: string }> = {};
   const passwordHash = await hash(process.env.DEV_PASSWORD ?? "password12", { memoryCost: 19456, timeCost: 2, parallelism: 1 });

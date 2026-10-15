@@ -7,7 +7,7 @@ export const metadata = { title: "Sign in" };
 export const dynamic = "force-dynamic";
 
 export default async function LoginPage() {
-  if (await getCurrentUser()) redirect("/projects");
+  if (await getCurrentUser()) redirect("/explore");
   return (
     <main className="flex min-h-screen items-center justify-center p-6">
       <div className="w-full max-w-sm rounded-xl border bg-card p-6 shadow-sm">

@@ -2,6 +2,10 @@
 
 Researched 2026-10-15 from heymarvin.com (product, pricing, integrations pages), the Marvin help centre, the 2024 recap, the Fall '25 and Summer 2026 release posts, and G2/TrustRadius for third-party context. Marketing claims were cross-checked against help-centre articles where one existed; where only marketing copy exists, the row says so. Nothing below is invented: if the research did not show a capability, it is marked "not confirmed".
 
+## Changes since this was written
+
+- **2026-10-15, milestone 10:** the highlight explorer (`/explore`) and Themes shipped. Themes are the spec's v2 insights expressed as a browsable tree (decisions D43, D45–D47). In section 8 below, "Insight report editor", "Draft states" and "Custom report templates" are now **Partial**: a theme has a finding, description, confidence, product area, nesting and ordered highlights, but no rich-text body, templates, publishing states, comments or exports. Section 6 "Keyword search" gains browsing by project, tag, person and theme with counts, which Marvin frames as Ask AI rather than navigation.
+
 ## How to read the status column
 
 | Status | Meaning |

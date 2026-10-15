@@ -63,7 +63,7 @@ export function TagsManager({ groups, tags, canManage }: { groups: Group[]; tags
               <Button variant="ghost" size="icon-xs" aria-label="Move group up" disabled={index === 0 || pending} onClick={() => run(() => reorderTagGroups({ orderedIds: swap(groups.map((g) => g.id), index, index - 1) }))}><ArrowUp className="size-3.5" /></Button>
               <Button variant="ghost" size="icon-xs" aria-label="Move group down" disabled={index === groups.length - 1 || pending} onClick={() => run(() => reorderTagGroups({ orderedIds: swap(groups.map((g) => g.id), index, index + 1) }))}><ArrowDown className="size-3.5" /></Button>
               <Button variant="ghost" size="icon-xs" aria-label="Add tag to group" onClick={() => setNewTag({ groupId: group.id, name: "" })}><Plus className="size-3.5" /></Button>
-              <ConfirmButton title={`Delete group “${group.name}”?`} description="Its tags are kept and become ungrouped." variant="ghost" size="icon-xs" onConfirm={() => deleteTagGroup({ id: group.id })}><Trash2 className="size-3.5" /></ConfirmButton>
+              <ConfirmButton title={`Delete group “${group.name}”?`} description="Its tags are kept and become ungrouped." variant="ghost" size="icon-xs" ariaLabel={`Delete group ${group.name}`} onConfirm={() => deleteTagGroup({ id: group.id })}><Trash2 className="size-3.5" /></ConfirmButton>
             </span>
           ) : null}
         </header>
@@ -91,7 +91,7 @@ export function TagsManager({ groups, tags, canManage }: { groups: Group[]; tags
                   <Button variant="ghost" size="icon-xs" aria-label={t.archivedAt ? "Restore tag" : "Archive tag"} onClick={() => run(() => setTagArchived({ id: t.id, archived: !t.archivedAt }), t.archivedAt ? "Tag restored" : "Tag archived")}>
                     {t.archivedAt ? <ArchiveRestore className="size-3.5" /> : <Archive className="size-3.5" />}
                   </Button>
-                  <ConfirmButton title={`Delete “${t.name}”?`} description={`Removes the tag from ${t._count.highlights} highlights. Prefer archiving unless the tag was a mistake.`} variant="ghost" size="icon-xs" onConfirm={() => deleteTag({ id: t.id })}><Trash2 className="size-3.5" /></ConfirmButton>
+                  <ConfirmButton title={`Delete “${t.name}”?`} description={`Removes the tag from ${t._count.highlights} highlights. Prefer archiving unless the tag was a mistake.`} variant="ghost" size="icon-xs" ariaLabel={`Delete tag ${t.name}`} onConfirm={() => deleteTag({ id: t.id })}><Trash2 className="size-3.5" /></ConfirmButton>
                 </span>
               ) : null}
             </li>

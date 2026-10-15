@@ -17,7 +17,7 @@ export async function login(_prev: LoginState, formData: FormData): Promise<Logi
   const ok = user?.passwordHash ? await verifyPassword(user.passwordHash, parsed.data.password) : false;
   if (!user || !ok) return { error: "Wrong email or password.", email };
   await createSession(user.id);
-  redirect("/projects");
+  redirect("/explore");
 }
 
 export async function logout() {

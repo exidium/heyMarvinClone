@@ -16,15 +16,16 @@ type Props = {
   children: React.ReactNode;
   variant?: React.ComponentProps<typeof Button>["variant"];
   size?: React.ComponentProps<typeof Button>["size"];
+  ariaLabel?: string;
 };
 
 /** A button that asks for confirmation before running a destructive action. */
-export function ConfirmButton({ title, description, confirmLabel = "Delete", onConfirm, children, variant = "outline", size = "sm" }: Props) {
+export function ConfirmButton({ title, description, confirmLabel = "Delete", onConfirm, children, variant = "outline", size = "sm", ariaLabel }: Props) {
   const [open, setOpen] = useState(false);
   const [pending, start] = useTransition();
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogTrigger render={<Button variant={variant} size={size} />}>{children}</AlertDialogTrigger>
+      <AlertDialogTrigger render={<Button variant={variant} size={size} aria-label={ariaLabel} />}>{children}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>{title}</AlertDialogTitle>

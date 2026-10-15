@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpenText, Bookmark, FolderKanban, Search, Tags, UserCog, Users } from "lucide-react";
+import { BookOpenText, Bookmark, Compass, FolderKanban, Search, Tags, UserCog, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const nav = [
+  { href: "/explore", label: "Explore", icon: Compass },
   { href: "/projects", label: "Projects", icon: FolderKanban },
   { href: "/participants", label: "Participants", icon: Users },
   { href: "/search", label: "Search", icon: Search },
@@ -44,7 +45,7 @@ export function AppSidebar({ userLabel = "Local mode", isAdmin = false, views = 
 
   return (
     <aside className="sticky top-0 flex h-screen w-56 shrink-0 flex-col border-r border-sidebar-border bg-sidebar px-3 py-4">
-      <Link href="/projects" className="mb-6 flex items-center gap-2 px-2">
+      <Link href="/explore" className="mb-6 flex items-center gap-2 px-2">
         <span className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
           <BookOpenText className="size-4" />
         </span>

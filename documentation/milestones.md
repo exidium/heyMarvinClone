@@ -79,3 +79,12 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - `src/lib/password.ts` (argon2id via `@node-rs/argon2`), `src/lib/session.ts` (random token in an HttpOnly cookie, SHA-256 stored, 30 days), `src/lib/auth.ts` now resolves the dev seam or the session; `requirePageUser` vs `requireUser` (D35).
 - `/login` (form with `useActionState`, generic error, keeps the email), sign-out in the sidebar, `/users` admin page (create with initial password, toggle admin, set password, delete with project reassignment), `scripts/create-user.ts` for the first admin. Seed gives dev users the password `password12` (override with `DEV_PASSWORD`).
 - Verified: `AUTH_E2E=1` Playwright spec with `AUTH_DISABLED=false`: signed-out redirect, wrong password rejected without clearing the email, editor signs in and out and never sees Users, admin sees Users, anonymous `PUT /api/upload` gets 401. Standalone production server refuses the dev seam in production.
+
+## M10 · Highlight explorer and themes (2026-10-15)
+
+- `/explore`: left tree with pivots Projects (default), Tags, People, Themes and counts on every node; middle list of highlights under the selected node (60 per page, keyboard j/k and arrows); right pane with the highlight in transcript context (two segments either side, marked span), participant and source facts, player seeking to the moment, "Open transcript", tags and themes.
+- Themes: create (finding, description, confidence, product area, parent), edit, delete (creator or admin), nest, drag highlight cards onto theme nodes, "Add to theme" picker in the detail pane, remove from a theme. `Theme`/`ThemeHighlight` replace the `Insight` tables (D45).
+- Home, login and logout now land on `/explore`; "Explore" is the first sidebar entry.
+- Schema declares the generated search columns and GIN indexes so Prisma sees no drift (D48); the themes migration restores the indexes the first failed run dropped.
+- Verified: typecheck and lint clean; all pivots and node types render with the seeded data; Playwright `tests/e2e/explore.spec.ts` covers tree navigation, list narrowing, keyboard selection, detail pane, theme creation, drag-and-drop, picker add, nesting, removal and deletion.
+- Dev-server note: the page reload loop seen on `/tags` earlier recurred on every page; a clean `.next` (stop, `rm -rf .next`, start) fixed it. Recorded in AGENTS.md.
