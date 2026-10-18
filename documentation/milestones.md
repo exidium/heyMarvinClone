@@ -89,3 +89,10 @@ What each milestone delivered and how it was verified. Decisions live in `decisi
 - Verified: typecheck and lint clean; all pivots and node types render with the seeded data; Playwright `tests/e2e/explore.spec.ts` covers tree navigation, list narrowing, keyboard selection, detail pane, theme creation, drag-and-drop, picker add, nesting, removal and deletion.
 - Dev-server note: the page reload loop seen on `/tags` earlier recurred on every page; a clean `.next` (stop, `rm -rf .next`, start) fixed it. Recorded in AGENTS.md.
 - Follow-up the same day: the explorer moved to its own route group `(explore)` with a top bar and no sidebar; a keyword search in the top bar (`q` in the URL) narrows the tree counts and the list (D49). Covered by a third Playwright test.
+
+## M11 · Static explorer demo on GitHub Pages (2026-10-18)
+
+- `scripts/export-demo-data.ts` (`pnpm demo:data`) writes the synthetic, OPEN-project subset of the database to `demo/public/data.json` with four example themes; it refuses non-synthetic data.
+- `demo/`: standalone Vite + React app reusing `src/lib/explore.ts`, `colors.ts` and `transcript/time.ts`; pivots, counts, keyword search (quotes, minus), highlight list with j/k, context pane with the marked span, read-only themes. No recordings, no editing.
+- `scripts/publish-demo.sh` builds `demo/` and force-pushes `demo/dist` to the `gh-pages` branch that Pages serves. Repository made public (D50).
+- Verified: local `vite preview` under the `/heyMarvinClone/` base path, exercised with Playwright: 140 highlights, tags pivot with 10 groups, theme view with 13 highlights, search narrowing to 18, context mark rendered, no console errors.

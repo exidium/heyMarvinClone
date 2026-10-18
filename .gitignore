@@ -16,3 +16,7 @@ next-env.d.ts
 /playwright-report/
 # user uploads (transcripts + recordings) live outside git
 /uploads/
+
+# static demo (GitHub Pages)
+/demo/node_modules/
+/demo/dist/

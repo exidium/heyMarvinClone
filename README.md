@@ -2,6 +2,8 @@
 
 Self-hosted research repository for interview transcripts, recordings, highlights, tags and search. Internal tool; no billing, no AI in v1.
 
+**Demo:** a read-only, static version of the explorer on synthetic data is published at https://exidium.github.io/heyMarvinClone/ (built from `demo/`; see `documentation/decisions.md` D50). Everything in this repository, including the fixtures, is synthetic.
+
 ## Local setup
 
 ```bash

@@ -16,7 +16,9 @@
     "postinstall": "prisma generate",
     "test": "vitest run",
     "test:watch": "vitest",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "demo:data": "tsx scripts/export-demo-data.ts",
+    "demo:build": "pnpm demo:data && pnpm --dir demo install --ignore-workspace && pnpm --dir demo build"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
