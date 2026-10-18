@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import { ExplorerShell } from "@/components/explore/ExplorerShell";
+import { ExploreTopBar } from "@/components/explore/ExploreTopBar";
 import { requirePageUser } from "@/lib/auth";
 import { parseKey, PIVOTS, type Pivot } from "@/lib/explore";
 import { buildTree, countVisible, getTheme, listHighlightsUnder, listThemes } from "@/server/queries/explore";
@@ -25,7 +27,11 @@ export default async function ExplorePage({ searchParams }: PageProps<"/explore"
   ]);
 
   return (
-    <ExplorerShell
+    <div className="flex min-h-screen flex-col">
+      <Suspense fallback={<div className="h-13 border-b" />}>
+        <ExploreTopBar />
+      </Suspense>
+      <ExplorerShell
         q={q}
         pivot={pivot}
         node={node}
@@ -39,6 +45,7 @@ export default async function ExplorePage({ searchParams }: PageProps<"/explore"
         userId={user.id}
         isAdmin={user.isAdmin}
         initialHighlightId={h}
-    />
+      />
+    </div>
   );
 }

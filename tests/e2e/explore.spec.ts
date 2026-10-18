@@ -100,10 +100,10 @@ test("themes: create, drag a highlight in, add via picker, nest, remove, delete"
   expect(after.subParent).toBeNull();
 });
 
-test("the top-bar search narrows the list and the tree counts, without the repository sidebar", async ({ page }) => {
+test("the top-bar search narrows the list and the tree counts, with the sidebar present", async ({ page }) => {
   await page.goto("/explore");
   await page.waitForLoadState("networkidle");
-  await expect(page.getByRole("link", { name: "Participants" })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "Participants" })).toBeVisible();
   const before = Number(await page.getByRole("button", { name: /All highlights/ }).locator("span").last().textContent());
   await page.getByRole("searchbox", { name: "Search highlights" }).fill("spreadsheet");
   await page.keyboard.press("Enter");

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // the static site has its own toolchain
+    "demo/**",
   ]),
 ]);
 

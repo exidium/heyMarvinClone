@@ -28,10 +28,9 @@ export function App() {
   if (!ix) return <p className="p-6 text-sm text-muted-foreground">Loading…</p>;
 
   const [a, b, c, d] = route.parts;
-  if (a === "explore" || !a) return <ExplorePage ix={ix} params={route.params} />;
-
   let page: React.ReactNode;
-  if (a === "projects" && !b) page = <ProjectsPage ix={ix} />;
+  if (a === "explore" || !a) page = <ExplorePage ix={ix} params={route.params} />;
+  else if (a === "projects" && !b) page = <ProjectsPage ix={ix} />;
   else if (a === "projects" && b && c === "sources" && d) page = <SourcePage ix={ix} projectId={b} sourceId={d} params={route.params} />;
   else if (a === "projects" && b) page = <ProjectPage ix={ix} id={b} />;
   else if (a === "participants" && b) page = <ParticipantPage ix={ix} id={b} />;
@@ -42,7 +41,7 @@ export function App() {
 
   return (
     <div className="flex min-h-screen w-full">
-      <Sidebar current={route.path} />
+      <Sidebar current={a ? route.path : "/explore"} />
       <main className="flex min-w-0 flex-1 flex-col">{page}</main>
     </div>
   );

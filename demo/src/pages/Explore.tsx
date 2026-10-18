@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { BookOpenText, ChevronDown, ChevronRight, Database, Search, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Search, X } from "lucide-react";
 import { findPath, formatKey, parseKey, PIVOT_LABEL, PIVOTS, type Pivot, type TreeNode } from "@lib/explore";
 import { formatClock } from "@lib/transcript/time";
 import { fmtDate, matchesQuery, tagColorOf, type Highlight, type Index } from "../data";
-import { navigate, href } from "../router";
+import { navigate } from "../router";
 import { Link, TagChip, cx } from "../ui";
 
 const NONE = "—";
@@ -143,21 +143,14 @@ export function ExplorePage({ ix, params }: { ix: Index; params: URLSearchParams
   return (
     <div className="flex h-screen flex-col">
       <header className="flex h-13 shrink-0 items-center gap-4 border-b px-4">
-        <a href={href("/explore")} className="flex shrink-0 items-center gap-2">
-          <span className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground"><BookOpenText className="size-4" /></span>
-          <span className="font-semibold tracking-tight">Research Repo</span>
-          <span className="hidden text-sm text-muted-foreground sm:inline">· Explore</span>
-        </a>
+        <h1 className="shrink-0 text-base font-semibold tracking-tight">Explore</h1>
         <form className="relative mx-auto w-full max-w-xl" role="search" onSubmit={(e) => { e.preventDefault(); set({ q: qDraft, h: null }); }}>
           <Search className="pointer-events-none absolute top-1/2 left-2.5 size-4 -translate-y-1/2 text-muted-foreground" />
           <input type="search" value={qDraft} onChange={(e) => setQDraft(e.target.value)} placeholder='Search highlights… quotes for a phrase, -word to exclude' aria-label="Search highlights"
             className="h-8 w-full rounded-lg border border-input bg-transparent pr-8 pl-8 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50" />
           {state.q ? <button type="button" aria-label="Clear search" className="absolute top-1/2 right-2 -translate-y-1/2 text-muted-foreground hover:text-foreground" onClick={() => { setQDraft(""); set({ q: "", h: null }); }}><X className="size-4" /></button> : null}
         </form>
-        <nav className="flex shrink-0 items-center gap-3 text-xs text-muted-foreground">
-          <Link to="/projects" className="flex items-center gap-1 rounded-md px-2 py-1 text-sm text-foreground hover:bg-muted"><Database className="size-4" /> Repository</Link>
-          <span className="hidden md:inline">Synthetic data · read-only</span>
-        </nav>
+        <p className="hidden shrink-0 text-xs text-muted-foreground lg:block">Synthetic data · read-only</p>
       </header>
 
       <div className="grid min-h-0 flex-1 grid-cols-[280px_minmax(0,1fr)_minmax(320px,38%)] gap-4 p-4">
