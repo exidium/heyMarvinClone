@@ -1,6 +1,6 @@
 #!/bin/sh
 # Builds the static explorer demo from the synthetic database and publishes demo/dist to the
-# gh-pages branch, which GitHub Pages serves at https://exidium.github.io/heyMarvinClone/.
+# gh-pages branch, which GitHub Pages serves at https://exidium.github.io/researchRepo/.
 # Needs only `repo` scope (no GitHub Actions). Run from the project root: ./scripts/publish-demo.sh
 set -eu
 cd "$(dirname "$0")/.."
